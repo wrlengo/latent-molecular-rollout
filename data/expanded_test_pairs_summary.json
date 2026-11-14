@@ -1,0 +1,25 @@
+{
+  "rule": "within-test pairs, |delta pKa| >= 1, Morgan2-2048 Tanimoto >= 0.5, oriented low to high pKa",
+  "n_test_states": 1151,
+  "n_pairs_total": 151,
+  "n_original_43_retained": 43,
+  "n_new_pairs": 108,
+  "new_pair_tanimoto_range": [
+    0.5,
+    0.59375
+  ],
+  "n_unique_sources_total": 231,
+  "max_abs_ridge_cosine_diff_vs_archived": 0.0,
+  "max_abs_head_cosine_diff_vs_archived": 0.0,
+  "columns": [
+    "low",
+    "high",
+    "src_smiles",
+    "tgt_smiles",
+    "delta_pka",
+    "tanimoto",
+    "ridge_cosine",
+    "pka_head_gradient_cosine"
+  ],
+  "note": "pka_head_gradient_cosine is recomputed for every pair and is used only as a reference baseline; policy metrics do not read it."
+}

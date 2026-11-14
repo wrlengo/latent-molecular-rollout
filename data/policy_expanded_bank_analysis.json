@@ -1,0 +1,84 @@
+{
+  "policy_recipe_unchanged": "same --pairs, seeds 0-2, 150 epochs, patience 25; only --test_pairs differs",
+  "expanded_run_n_test_pairs": 151,
+  "original_bank_from_archived_run": {
+    "n": 43,
+    "median": 0.5767258405685425,
+    "mean": 0.39870512591631607,
+    "median_ci95": [
+      0.2350938320159912,
+      0.6947899460792542
+    ],
+    "frac_above_0.3": 0.627906976744186,
+    "n_above_0.3": 27,
+    "frac_above_0.5": 0.5348837209302325
+  },
+  "original_bank_from_expanded_run": {
+    "n": 43,
+    "median": 0.5767258405685425,
+    "mean": 0.3987051368431123,
+    "median_ci95": [
+      0.2350938618183136,
+      0.6947899460792542
+    ],
+    "frac_above_0.3": 0.627906976744186,
+    "n_above_0.3": 27,
+    "frac_above_0.5": 0.5348837209302325
+  },
+  "new_pairs_only": {
+    "n": 108,
+    "median": 0.5425416231155396,
+    "mean": 0.42703909758064484,
+    "median_ci95": [
+      0.4032747745513916,
+      0.6264810860157013
+    ],
+    "frac_above_0.3": 0.6296296296296297,
+    "n_above_0.3": 68,
+    "frac_above_0.5": 0.5277777777777778
+  },
+  "pooled_expanded_bank": {
+    "n": 151,
+    "median": 0.5467954277992249,
+    "mean": 0.4189704862447912,
+    "median_ci95": [
+      0.4068527817726135,
+      0.6249251365661621
+    ],
+    "frac_above_0.3": 0.6291390728476821,
+    "n_above_0.3": 95,
+    "frac_above_0.5": 0.5298013245033113
+  },
+  "archived_amplitude_43": {
+    "median_step_norm": 63.97699737548828,
+    "step_norm_cv": 0.7099878191947937,
+    "median_abs_dpred": 16.837441556217932,
+    "frac_in_0.2_1.0": 0.0,
+    "sign_acc": 0.3953488372093023,
+    "pearson_signed": 0.01390334053868149,
+    "pearson_abs": -0.027535173732016475
+  },
+  "expanded_amplitude_151": {
+    "median_step_norm": 66.58333587646484,
+    "step_norm_cv": 0.6185521483421326,
+    "median_abs_dpred": 23.37759013918749,
+    "frac_in_0.2_1.0": 0.013245033112582781,
+    "sign_acc": 0.4503311258278146,
+    "pearson_signed": 0.13752514850288058,
+    "pearson_abs": 0.24653998812060202
+  },
+  "archived_small_gap": {
+    "n": 13,
+    "median": 0.44179174304008484
+  },
+  "expanded_small_gap": {
+    "n": 49,
+    "median": 0.5147842764854431
+  },
+  "g4_reference_median_cos_archived_pairset": 0.151783287525177,
+  "baseline_reproducibility": {
+    "archived_ensemble_median_43": 0.5767258405685425,
+    "repro_ensemble_median_43": 0.5767258405685425,
+    "abs_diff": 0.0
+  }
+}

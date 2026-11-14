@@ -222,6 +222,26 @@
       "amplitude_scale_train.json": {
         "sha256": "746599b3bb66355ba83ba4f42513db3e6a06f2f2c29bea98e3168cc67186592e",
         "bytes": 756
+      },
+      "policy_amplitude_readout_pairs_expanded.csv": {
+        "sha256": "f0dfd2619ee8912a9cebf9ca182e6f0ab9aa59e175086cbb0b30bf9a70685261",
+        "bytes": 21017
+      },
+      "expanded_test_pairs_summary.json": {
+        "sha256": "157e6319e17fc88fb6c496976229f49cd9764932846b10bf56e84203f2b74eba",
+        "bytes": 698
+      },
+      "policy_head_expanded_results.json": {
+        "sha256": "10163050ec8cf84cd6310c8127e9aa1aaa633229359d59fbdeaf1aeb510548d2",
+        "bytes": 44572
+      },
+      "policy_head_baseline_repro_results.json": {
+        "sha256": "484236c8becba298388a107c35fc904886c6d4f8ee6277b280e0610cbe83dffe",
+        "bytes": 32502
+      },
+      "policy_expanded_bank_analysis.json": {
+        "sha256": "31c292681045563879048319753ad26f759a5dc7c0ed2cc805d8f7b2c8ce28c6",
+        "bytes": 2369
       }
     },
     "training_budget": {
@@ -675,6 +695,14 @@
         "sha256": "00c4c3beda5fe5600602d4a4e7c2fc8b00a9cfac41a47d7156d958c37bc77ea2",
         "bytes": 1457
       },
+      "make_expanded_test_pairs.py": {
+        "sha256": "1375786468c2bb6946314819966fa7903af0596b953f4ededb5f6c7d6c092f9a",
+        "bytes": 7225
+      },
+      "analyze_expanded_bank.py": {
+        "sha256": "8f22703245a84da4700bcf870e293418118a51985222e8613b63489bb711a79b",
+        "bytes": 3981
+      },
       "fit_amplitude_scale.py": {
         "sha256": "4a878475241f36b3bafe9bff6808258dfe756e5685962ded5c6fc8dd271bfafe",
         "bytes": 3900
@@ -696,8 +724,8 @@
         "bytes": 10549
       },
       "make_evaluation_manifest.py": {
-        "sha256": "4a5cefd289ddbcebfcfdd37ed590780cfa0a5ae0d4b82409649806a204be2b8b",
-        "bytes": 23219
+        "sha256": "b63000bd5f2c2a3b97cc028e82cb8d61fe86124badd30f11cb75ce49e5e91772",
+        "bytes": 23564
       }
     },
     "p3_decode": {

@@ -1,0 +1,16 @@
+\begin{table}[h]
+\centering
+\caption{Target-conditioned policy-head seed detail on 43 held-out pairs. The prespecified direction criterion applies to the median point estimate, not to every pair or to the CI lower bound; all four median CIs have lower bounds below $0.3$. Small-gap pairs are the 13 pairs with $1\leq|\Delta\pka|<2$. Amplitude statistics use $s=1.0$; correlation and sign accuracy do not depend on the scale of a fixed nonzero step. Norm CV is the coefficient of variation of the raw policy displacement norms before fixed-step normalization.}
+\label{tab:policy_seeds}
+\scriptsize
+\begin{tabular}{lccccccc}
+\toprule
+Seed & Cos & 95\% CI & Pairs $\cos>0.3$ & Small-gap cos & Amp. corr & Sign acc. & Norm CV \\
+\midrule
+Seed 0 & 0.482 & [0.292, 0.725] & 27/43 (0.628) & 0.463 & -0.079 & 0.395 & 0.722 \\
+Seed 1 & 0.539 & [0.274, 0.691] & 26/43 (0.605) & 0.496 & 0.208 & 0.744 & 0.733 \\
+Seed 2 & 0.469 & [0.287, 0.673] & 27/43 (0.628) & 0.344 & -0.012 & 0.512 & 0.638 \\
+Ensemble & 0.577 & [0.235, 0.695] & 27/43 (0.628) & 0.442 & -0.020 & 0.395 & 0.710 \\
+\bottomrule
+\end{tabular}
+\end{table}

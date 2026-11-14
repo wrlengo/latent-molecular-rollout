@@ -1,0 +1,14 @@
+{
+  "ckpt": "/home/bingxing2/home/scx9kyg/pKa/runs/v3_C_gen2_rej3/stage3_sub3",
+  "split": "val",
+  "n": 255,
+  "validity": 0.9490196078431372,
+  "copy_rate": 0.0784313725490196,
+  "tanimoto_mean": 0.5316296462658656,
+  "scored": 242,
+  "dir_acc": 0.5702479338842975,
+  "mae_vs_target": 2.8510278925619836,
+  "mean_abs_move": 2.784963842975207,
+  "noop_mae": 2.2804545454545453,
+  "total_s": 295.41033720970154
+}

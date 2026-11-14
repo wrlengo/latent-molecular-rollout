@@ -1,0 +1,8 @@
+Metric,gen2-final,SFT single,SFT Best-of-8,Train-selected constant
+Direction accuracy (all n=255; missing=no-op),0.5922,0.6863,0.8000 (oracle),0.6706
+Direction accuracy (paired n=235),0.6426,0.6936,—,—
+Target MAE (paired n=235),2.424,2.190,—,—
+Best-of-8 target MAE (oracle n=255),—,—,1.313,—
+Unique valid molecules,227,241,—,—
+Copy rate,0.051,0.122,—,—
+Separate no-op reference (n=255),Direction N/A; target MAE = 2.293,,,

@@ -1,0 +1,72 @@
+{
+  "baseline": {
+    "ensemble_median_cos": 0.5767258405685425,
+    "ensemble_amplitude_corr": -0.019929015575093783,
+    "step_sizes": [
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      1.0,
+      2.0,
+      3.0
+    ],
+    "step_median_abs_dpred": [
+      0.029611592980509513,
+      0.059223185961019026,
+      0.08883477894152852,
+      0.14805796490254755,
+      0.2961159298050951,
+      0.5922318596101902,
+      0.8883477894152854
+    ],
+    "all_steps_corr_below_0.1": true,
+    "pairs_with_cos_above_0.3": {
+      "seed_0": {
+        "n": 27,
+        "fraction": 0.627906976744186,
+        "median_cos_ci95": [
+          0.29197436571121216,
+          0.725476861000061
+        ]
+      },
+      "seed_1": {
+        "n": 26,
+        "fraction": 0.6046511627906976,
+        "median_cos_ci95": [
+          0.27386218309402466,
+          0.6914530992507935
+        ]
+      },
+      "seed_2": {
+        "n": 27,
+        "fraction": 0.627906976744186,
+        "median_cos_ci95": [
+          0.2867239713668823,
+          0.6730303764343262
+        ]
+      },
+      "ensemble": {
+        "n": 27,
+        "fraction": 0.627906976744186,
+        "median_cos_ci95": [
+          0.2350938320159912,
+          0.6947899460792542
+        ]
+      }
+    },
+    "calibration_criterion_met": false
+  },
+  "amplitude_supervision": {
+    "ensemble_median_cos": 0.19208736717700958,
+    "ensemble_learned_amplitude_corr": 0.1256676867873644,
+    "joint_criterion_met": false
+  },
+  "g2": {
+    "median_loss_initial": 4.0,
+    "median_loss_final": 0.06312691047787666,
+    "median_abs_error_initial": 2.0,
+    "median_abs_error_final": 0.25124978651104335,
+    "mean_abs_error_final": 0.2882850019735847
+  }
+}

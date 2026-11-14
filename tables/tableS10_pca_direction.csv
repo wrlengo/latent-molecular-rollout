@@ -1,0 +1,17 @@
+metric,value
+k90,6
+variance_captured_at_k90,0.9019070662544768
+top1_explained_variance_ratio,0.6236586439972772
+fit_top90_norm_fraction_median,0.8195468089973065
+test_top90_norm_fraction_median,0.8184025600128434
+test_top90_norm_fraction_ci_low,0.7718205849817216
+test_top90_norm_fraction_ci_high,0.8485056300045938
+test_top90_energy_fraction_median,0.6697827502355758
+mean_direction_top90_norm_fraction,0.9495031427782772
+test_full_cosine_median,0.2842762220234633
+test_full_cosine_ci_low,-0.045305705229681165
+test_full_cosine_ci_high,0.42678159932042337
+test_top90_cosine_median,0.28157002375819884
+test_top90_cosine_ci_low,-0.013692275141493007
+test_top90_cosine_ci_high,0.44000660694563043
+subspace_decision,represented_in_top90

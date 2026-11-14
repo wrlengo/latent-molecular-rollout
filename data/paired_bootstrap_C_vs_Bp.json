@@ -1,0 +1,17 @@
+{
+  "comparison": "C minus B-prime; per-row absolute pKa error",
+  "n_pairs": 1151,
+  "n_bootstrap": 10000,
+  "seed": 0,
+  "mae_C": 2.0869960975351796,
+  "mae_Bp": 2.3626987505202495,
+  "delta_mae": -0.27570265298506985,
+  "ci95_percentile": [
+    -0.35246456786925434,
+    -0.20288629870534877
+  ],
+  "p_two_sided_bootstrap": 0.00019998000199980003,
+  "n_bootstrap_delta_ge_zero": 0,
+  "n_bootstrap_delta_le_zero": 10000,
+  "paired_rows_identical_ground_truth": true
+}

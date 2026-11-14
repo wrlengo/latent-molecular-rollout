@@ -1,0 +1,44 @@
+{
+  "method": "chosen=min absolute PkaHead error; rejected=max absolute PkaHead error",
+  "error_margin_exclusive": 1e-08,
+  "filters": [
+    "Remove exact held-out task, ordered source/target-molecule, or source-molecule overlap before pair construction.",
+    "Canonicalize and deduplicate valid generated candidates within each training row.",
+    "Require at least two unique valid candidates.",
+    "Require a non-copy chosen structure.",
+    "Require rejected absolute error - chosen absolute error > margin.",
+    "No direction-correctness filter is applied to chosen."
+  ],
+  "counts": {
+    "retained": 2221,
+    "fewer_than_two_unique_valid_candidates": 35,
+    "chosen_is_copy": 37,
+    "error_margin_not_exceeded": 2
+  },
+  "n_train_raw": 2295,
+  "n_val_raw": 255,
+  "n_pairs": 2221,
+  "held_out_audit": {
+    "train_rows_with_exact_task_in_val": [],
+    "train_rows_with_ordered_molecule_pair_in_val": [],
+    "train_rows_with_source_molecule_in_val": [],
+    "retained_train_val_exact_task_overlap": 0,
+    "retained_train_val_ordered_molecule_pair_overlap": 0,
+    "retained_train_val_source_molecule_overlap": 0
+  },
+  "chosen_direction_accuracy": 0.8153984691580369,
+  "rejected_direction_accuracy": 0.520036019810896,
+  "chosen_copy_rate": 0.0,
+  "rejected_copy_rate": 0.01530841963079694,
+  "input_hashes": {
+    "runs/eval/bon_gen2f_train_n8_shard0.json": "fb32935d43396a5cf3a865e7ce4c5473084989306fca9656fdebaa00508353e8",
+    "runs/eval/bon_gen2f_train_n8_shard1.json": "298ddb3d5001e3c89a4e2f32e73b52f6e54a17dc8ec8a9718e9620e96c3b30a0",
+    "runs/eval/bon_gen2f_train_n8_shard2.json": "ad51d9bbc2fabd8c30e205cb22cad990226c00d00cd2f108a89d473b442869cd",
+    "runs/eval/bon_gen2f_train_n8_shard3.json": "2fbbc2d71ea26991cdb620755ea62ba5c6c3952539ae05a962fb99c5f1d5116f"
+  },
+  "train_raw": "pka_sft_gen2/train/pka_train.json",
+  "train_raw_sha256": "2199445a76981d8931cce2ccd217eaffc6a6f217da49e30b618de042ee5e3ace",
+  "val_raw": "pka_sft_gen2/val/pka_val.json",
+  "val_raw_sha256": "6eb272bc25394c23103f4964016bfc011fd6810d8d917c09556aa768bf45282f",
+  "output_sha256": "499d3b4e60f768e76dc973d92a5e53d71f807aceed3e2648032098b0f1ae16fb"
+}

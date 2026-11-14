@@ -1,0 +1,100 @@
+{
+ "ckpt": "/home/bingxing2/home/scx9kyg/pKa/runs/v3_C_latent_head/stage3_sub3",
+ "dl_ids": {
+  "latent": 151671,
+  "start": 151672,
+  "end": 151673
+ },
+ "model_ids": {
+  "latent": 151671,
+  "start": 151672,
+  "end": 151673
+ },
+ "K": 6,
+ "slot_counts": [
+  6,
+  6,
+  6,
+  6,
+  6,
+  6,
+  6,
+  6,
+  6,
+  6,
+  6,
+  6
+ ],
+ "gt": [
+  -1.8300000429153442,
+  7.300000190734863,
+  2.1500000953674316,
+  9.569999694824219,
+  5.590000152587891,
+  3.4000000953674316,
+  5.460000038146973,
+  9.520000457763672,
+  5.230000019073486,
+  6.0,
+  7.199999809265137,
+  8.59000015258789
+ ],
+ "baseline_pred": [
+  -1.7,
+  9.5,
+  8.7,
+  9.5,
+  7.1,
+  3.5,
+  5.45,
+  9.4,
+  5.48,
+  2.6,
+  8.4,
+  8.25
+ ],
+ "zero_pred": [
+  -1.6,
+  9.5,
+  8.0,
+  9.3,
+  7.0,
+  3.2,
+  5.45,
+  9.4,
+  5.43,
+  2.6,
+  8.4,
+  8.25
+ ],
+ "text_changed": [
+  true,
+  false,
+  true,
+  true,
+  true,
+  true,
+  false,
+  false,
+  true,
+  false,
+  false,
+  false
+ ],
+ "pred_changed": [
+  true,
+  false,
+  true,
+  true,
+  true,
+  true,
+  false,
+  false,
+  true,
+  false,
+  false,
+  false
+ ],
+ "n_text_changed": 6,
+ "n_pred_changed": 6
+}

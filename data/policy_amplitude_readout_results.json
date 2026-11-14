@@ -1,0 +1,191 @@
+{
+  "description": "Amplitude reread with the nonlinear PkaHead gradient; same 43 pairs and policy checkpoints as the reported -0.0199.",
+  "preregistered_rule": {
+    "both_null": "ridge and PkaHead fixed-step correlations both <= 0.2 in magnitude -> amplitude non-control stands",
+    "collapse": "PkaHead fixed-step correlation > 0.5 -> amplitude conclusion collapses and title must change",
+    "otherwise": "inconsistent readouts -> downgrade to 'not observed under either readout'"
+  },
+  "inputs": {
+    "h_test": "/home/bingxing2/home/scx9kyg/pKa/runs/fig/h_test.npz",
+    "test_pairs": "/home/bingxing2/home/scx9kyg/pKa/experiments/frozen_ridge_test_pairs.csv",
+    "policy_models": "/home/bingxing2/home/scx9kyg/pKa/experiments/policy_decode_models",
+    "pka_head_ckpt": "/home/bingxing2/home/scx9kyg/pKa/runs/v3_C_latent_head_fix/stage3_sub3/mm_projector.pt",
+    "ridge": "/home/bingxing2/home/scx9kyg/pKa/experiments/ridge_selected_weights.npz",
+    "pka_head_arch": {
+      "d_in": 4096,
+      "d_mid": 2048,
+      "n_layers": 2
+    },
+    "n_pairs": 43,
+    "n_source_molecules": 37,
+    "device": "cuda"
+  },
+  "sanity": {
+    "median_policy_cosine": 0.5767258405685425,
+    "median_ridge_cosine": 1.182296724329427e-05,
+    "median_pkahead_gradient_cosine": 0.10741908848285675,
+    "recomputed_pkahead_gradient_cosine": 0.10741909432469175,
+    "pkahead_source_mae": 2.167618364095688,
+    "pkahead_gradient_norm_median": 0.2947010734261352,
+    "pkahead_gradient_norm_cv": 0.12292807965337786
+  },
+  "amplitude": {
+    "ridge_fixed_step_s1": {
+      "pearson_signed": -0.010100631214009694,
+      "pearson_abs": -0.15508535977833834,
+      "sign_acc": 0.3953488372093023,
+      "median_abs_dpred": 0.2901350513344596,
+      "frac_in_0.2_1.0": 0.46511627906976744,
+      "pair_bootstrap_95ci": [
+        -0.21415595382333327,
+        0.17577122952371727
+      ],
+      "cluster_bootstrap_95ci": [
+        -0.2348231489166027,
+        0.21216600773396366
+      ]
+    },
+    "ridge_learned_norm": {
+      "pearson_signed": 0.01390334053868149,
+      "pearson_abs": -0.027535173732016475,
+      "sign_acc": 0.3953488372093023,
+      "median_abs_dpred": 16.837441556217932,
+      "frac_in_0.2_1.0": 0.0,
+      "pair_bootstrap_95ci": [
+        -0.18229344433198955,
+        0.2319181134927433
+      ],
+      "cluster_bootstrap_95ci": [
+        -0.1961484687788491,
+        0.25340340074900347
+      ]
+    },
+    "pkahead_fixed_step_s1": {
+      "pearson_signed": 0.45969639962960257,
+      "pearson_abs": 0.5341679735152973,
+      "sign_acc": 0.7674418604651163,
+      "median_abs_dpred": 0.04707195568699858,
+      "frac_in_0.2_1.0": 0.0,
+      "pair_bootstrap_95ci": [
+        0.23726649631223826,
+        0.62928891350861
+      ],
+      "cluster_bootstrap_95ci": [
+        0.17975280540454933,
+        0.6471533890721931
+      ]
+    },
+    "pkahead_learned_norm": {
+      "pearson_signed": 0.5848862301484292,
+      "pearson_abs": 0.6761190433016284,
+      "sign_acc": 0.7441860465116279,
+      "median_abs_dpred": 3.113632531964144,
+      "frac_in_0.2_1.0": 0.09302325581395349,
+      "pair_bootstrap_95ci": [
+        0.25363445870136914,
+        0.7975829976973045
+      ],
+      "cluster_bootstrap_95ci": [
+        0.21469433992071854,
+        0.8109056318530159
+      ]
+    },
+    "pkahead_true_direction_s1": {
+      "pearson_signed": -0.09289400897516342,
+      "pearson_abs": 0.29500491536313334,
+      "sign_acc": 0.627906976744186,
+      "median_abs_dpred": 0.057747342520410826,
+      "frac_in_0.2_1.0": 0.0,
+      "pair_bootstrap_95ci": [
+        -0.40735574059591473,
+        0.2887338251335423
+      ],
+      "cluster_bootstrap_95ci": [
+        -0.38100961127586763,
+        0.2977236027741809
+      ]
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "test_median_cos": 0.48235419392585754,
+      "ridge_fixed_step_s1": {
+        "pearson_signed": -0.0791977643284713,
+        "pearson_abs": -0.022418766194067314,
+        "sign_acc": 0.3953488372093023,
+        "median_abs_dpred": 0.30099952457219514,
+        "frac_in_0.2_1.0": 0.6046511627906976
+      },
+      "pkahead_fixed_step_s1": {
+        "pearson_signed": 0.3346688722131275,
+        "pearson_abs": 0.3344616008701497,
+        "sign_acc": 0.813953488372093,
+        "median_abs_dpred": 0.05870535636229707,
+        "frac_in_0.2_1.0": 0.0
+      },
+      "pkahead_learned_norm": {
+        "pearson_signed": 0.5610673235991664,
+        "pearson_abs": 0.6681991374255768,
+        "sign_acc": 0.813953488372093,
+        "median_abs_dpred": 4.0949652500250835,
+        "frac_in_0.2_1.0": 0.13953488372093023
+      }
+    },
+    {
+      "seed": 1,
+      "test_median_cos": 0.5392277240753174,
+      "ridge_fixed_step_s1": {
+        "pearson_signed": 0.20760447425422124,
+        "pearson_abs": 0.005308863947615247,
+        "sign_acc": 0.7441860465116279,
+        "median_abs_dpred": 0.14503913044712463,
+        "frac_in_0.2_1.0": 0.37209302325581395
+      },
+      "pkahead_fixed_step_s1": {
+        "pearson_signed": 0.4092102030648804,
+        "pearson_abs": 0.383581228155151,
+        "sign_acc": 0.7674418604651163,
+        "median_abs_dpred": 0.05929227442379227,
+        "frac_in_0.2_1.0": 0.0
+      },
+      "pkahead_learned_norm": {
+        "pearson_signed": 0.5232513571621172,
+        "pearson_abs": 0.5291246628252643,
+        "sign_acc": 0.7674418604651163,
+        "median_abs_dpred": 2.7997106290747373,
+        "frac_in_0.2_1.0": 0.18604651162790697
+      }
+    },
+    {
+      "seed": 2,
+      "test_median_cos": 0.46918952465057373,
+      "ridge_fixed_step_s1": {
+        "pearson_signed": -0.011843252690778901,
+        "pearson_abs": -0.1639752453351655,
+        "sign_acc": 0.5116279069767442,
+        "median_abs_dpred": 0.8019137924190756,
+        "frac_in_0.2_1.0": 0.46511627906976744
+      },
+      "pkahead_fixed_step_s1": {
+        "pearson_signed": 0.43952389722989565,
+        "pearson_abs": 0.46225965958710813,
+        "sign_acc": 0.6976744186046512,
+        "median_abs_dpred": 0.05958601987129195,
+        "frac_in_0.2_1.0": 0.0
+      },
+      "pkahead_learned_norm": {
+        "pearson_signed": 0.537814078300273,
+        "pearson_abs": 0.6247523343567352,
+        "sign_acc": 0.6976744186046512,
+        "median_abs_dpred": 4.8639094000296135,
+        "frac_in_0.2_1.0": 0.20930232558139536
+      }
+    }
+  ],
+  "decision": {
+    "outcome": "inconsistent_readouts_downgrade",
+    "pkahead_fixed_step_corr": 0.45969639962960257,
+    "ridge_fixed_step_corr": -0.010100631214009694
+  }
+}

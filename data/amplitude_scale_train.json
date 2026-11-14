@@ -1,0 +1,22 @@
+{
+  "protocol": "Global amplitude scale fitted on training pairs only; the amplitude inhibitor (PkaHead) and all policy checkpoints are frozen.",
+  "n_train_pairs": 5456,
+  "pka_head_arch": {
+    "d_in": 4096,
+    "d_mid": 2048,
+    "n_layers": 2
+  },
+  "sigma_least_squares": 0.2169456168505681,
+  "sigma_inverse_median_ratio": 0.8214522015216068,
+  "train": {
+    "fraction_positive_delta": 0.5,
+    "pearson": 0.5526584665400878,
+    "spearman": 0.546102313818041,
+    "median_pred": -0.32316596020899335,
+    "median_true": 0.0,
+    "median_ratio": 1.217356284574638,
+    "frac_ratio_in_2_3_1_5": 0.1689882697947214,
+    "mae": 3.9528917232713523
+  },
+  "note": "Apply sigma to the held-out pairs recorded in data/policy_amplitude_readout_pairs.csv."
+}

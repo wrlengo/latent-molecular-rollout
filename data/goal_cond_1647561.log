@@ -1,0 +1,90 @@
+gcc-11.3.0 loaded successful
+cuda-12.4 loaded successful
+============================================================
+Goal-Conditioned Stage 3 Trainer
+output_dir: /home/bingxing2/home/scx9kyg/pKa/runs/v3_C_goal_conditioned
+anchor_beta=0.30  pka_lambda=0.100  lr=2.00e-04  bs=1
+============================================================
+train=5184  val=272  cheater_monitor=300
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+trainable params: 7,667,712 || all params: 8,198,403,072 || trainable%: 0.0935
+[mem] gradient checkpointing enabled
+
+============================================================
+EPOCH 1 / 1
+============================================================
+
+[guardrail pre-epoch]
+  cheater  mean|pred-target|=5.321
+  val      mean|pred-target|=6.609  frac_sign_match=0.000
+[step 50] loss=3.797  ce=1.236  pka=18.441  anchor=23.895
+[step 100] loss=1.916  ce=0.292  pka=10.569  anchor=18.906
+[step 150] loss=1.260  ce=0.178  pka=5.773  anchor=16.835
+[step 200] loss=1.183  ce=0.152  pka=4.548  anchor=19.187
+[step 250] loss=1.291  ce=0.139  pka=4.355  anchor=23.880
+[step 300] loss=0.969  ce=0.103  pka=2.129  anchor=21.765
+[guardrail step 300]
+  cheater|t|=1.084  anchor|s|=4.363  val frac_sign=1.000
+!!! CHEAT mid-step. STOPPING.
+  saved /home/bingxing2/home/scx9kyg/pKa/runs/v3_C_goal_conditioned/stage3_goal_final
+
+============================================================
+TRAINING SUMMARY
+============================================================
+cheat_detected: True
+best checkpoint anchor MAE: inf at epoch -1
+anchor degraded by inf > 0.5 → model forgot source prediction
+ALL DONE (cheater=True)
+EXIT=0
+
+
+
+============ Job 1647561 Performance Details ============
+JobID: 1647561
+User: scx9kyg
+Nodes、GPU: paraai-n32-h-01-agent-33: 0
+Time Range: 2026-11-12 18:14:59 - 2026-11-12 18:32:09
+Running time: 0d0H17M10S
+GPU Util: 32.33 %
+GMem Util: 43.86 %
+GMemBW Util: 8.52 %
+Tensor Core Util: 10.11 %
+Tensor IMMA Util: N/A
+Tensor HMMA Util: N/A
+Tensor DFMA Util: N/A
+FP64 Util: 0 %
+FP32 Util: 0.72 %
+FP16 Util: 0 %
+GPCIE RX: 90.93 MB/s
+GPCIE TX: 12.95 MB/s
+GNVLINK: N/A
+GPU Power: 64.03 W
+GPU Temperature: 32.71 °C
+
+Additional Performance Data:
+--- flops performance(avg to single card) ---
+|- fp64: 0 TFlops
+|- fp32: 0 TFlops
+|- fp16: 0 TFlops
+|- tensor: 21 TFlops
+> |- GMEMBW/F: 6,473 B/MF
+> |- NVLINK/F: No Data
+> |- IB_TX/F: 0 B/MF
+> |- IB_RX/F: 19 B/MF
+> |- PCIE_TX/F: 1 B/MF
+> |- PCIE_RX/F: 4 B/MF
+=========================================================

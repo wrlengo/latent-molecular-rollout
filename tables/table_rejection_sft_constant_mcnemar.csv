@@ -1,0 +1,3 @@
+model,constant,n,n_scored,n_missing_noop,n_correct,direction_accuracy,constant_n_correct,constant_direction_accuracy,constant_only_correct,model_only_correct,two_sided_exact_p,mae_all_rows_missing_noop
+gen2_final,3.74,255,235,20,151,0.592156862745098,171,0.6705882352941176,52,32,0.037529533634413165,2.4141078431372547
+oracle_best_sft,3.74,255,252,3,175,0.6862745098039216,171,0.6705882352941176,34,38,0.723948145746914,2.175427006740196

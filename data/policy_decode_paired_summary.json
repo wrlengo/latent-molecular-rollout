@@ -1,0 +1,39 @@
+{
+  "n": 80,
+  "n_paired_oracle_scored": 80,
+  "n_identity_zero_without_oracle": 0,
+  "n_sequence_changed": 1,
+  "n_smiles_changed": 1,
+  "h_target_cosine_median": 0.9999677538871765,
+  "h_target_relative_error_median": 0.008068433497101068,
+  "readout_direction_accuracy": 0.0625,
+  "readout_abs_delta_median": 0.0,
+  "intervened_validity": 1.0,
+  "intervened_tanimoto_median_valid": 0.5764667106130521,
+  "paired_direction_accuracy": 0.0,
+  "paired_abs_delta_median": 0.0,
+  "paired_abs_delta_in_0.2_1.0": 0.0,
+  "paired_zero_delta": 79,
+  "changed_subset_n": 1,
+  "changed_subset_direction_accuracy": 0.0,
+  "changed_subset_abs_delta_median": 1.296875,
+  "learned_oracle": "MAE-1.1 text-query PkaHead; not an external predictor or experimental measurement",
+  "checkpoint_compatibility": {
+    "pka_head_exact_match": false,
+    "pka_head_max_abs_diff": 0.24560546875,
+    "projector_max_abs_diff": 0.057373046875
+  },
+  "decoding_protocol": {
+    "decoding": "greedy",
+    "max_new_tokens": 96,
+    "temperature": null,
+    "top_p": null,
+    "paired_generation_seed": null
+  },
+  "criteria": {
+    "validity_at_least_0.9": true,
+    "tanimoto_median_at_least_0.6": false,
+    "direction_at_least_0.65": false,
+    "amplitude_median_in_0.2_1.0": false
+  }
+}

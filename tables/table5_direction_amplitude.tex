@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Directional learnability and amplitude controllability evaluated on the same 43 held-out pairs. The direction criterion applies to the median point estimate ($>0.3$), not to every pair or to the CI lower bound; pair-level fractions and median CIs are given in Table~S3. The amplitude criterion is signed correlation $>0.5$. Amplitude correlations are invariant to the fixed step size. G4 and ridge have no comparable target-conditioned amplitude evaluation.}
+\label{tab:direction_amplitude}
+\small
+\begin{tabular}{lrrcc}
+\toprule
+Method & Direction cos & Amplitude corr & Direction & Amplitude \\
+\midrule
+G4 naive gradient & 0.107 & --- & \xmark & --- \\
+Frozen ridge ($z$-scored) & 0.00217 & --- & \xmark & --- \\
+Policy seed 0 & 0.482 & -0.079 & \cmark & \xmark \\
+Policy seed 1 & 0.539 & 0.208 & \cmark & \xmark \\
+Policy seed 2 & 0.469 & -0.012 & \cmark & \xmark \\
+Policy ensemble & 0.577 & -0.020 & \cmark & \xmark \\
+\bottomrule
+\end{tabular}
+\end{table}

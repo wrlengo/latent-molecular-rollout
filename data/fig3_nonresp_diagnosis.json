@@ -1,0 +1,559 @@
+{
+  "responsive": {
+    "n": 18,
+    "gaps": [
+      3.310000419616699,
+      3.0399998664855956,
+      2.3000000953674316,
+      2.509999990463257,
+      1.9999999046325683,
+      5.670000457763672,
+      2.3799999237060545,
+      0.809999942779541,
+      1.1199999809265133,
+      5.300000000000001,
+      2.829999732971192,
+      5.920000076293945,
+      0.9000000000000004,
+      2.9000000953674316,
+      3.240000057220459,
+      2.7499999046325683,
+      3.2600000381469734,
+      1.0
+    ],
+    "ionizable_frac": 0.6111111111111112
+  },
+  "nonresponsive": {
+    "n": 22,
+    "gaps": [
+      0.8300000429153442,
+      3.060000419616699,
+      2.54000015258789,
+      0.6400001049041748,
+      2.9300001144409187,
+      9.600000381469727,
+      2.0,
+      0.09999990463256836,
+      3.819999933242798,
+      0.7000000953674315,
+      3.139999771118164,
+      0.8700000762939446,
+      2.3000000000000007,
+      3.0,
+      3.200000047683716,
+      8.649999618530273,
+      2.0700000762939452,
+      1.1899999856948853,
+      0.19999980926513672,
+      0.7300000190734863,
+      8.539999961853027,
+      5.840000152587891
+    ],
+    "ionizable_frac": 0.7727272727272727
+  },
+  "details": {
+    "responsive": [
+      {
+        "i": 1,
+        "smiles": "Brc1ccc(Cc2nn[nH]n2)cc1",
+        "base_pred": 10.0,
+        "target": 13.3100004196167,
+        "gap": 3.310000419616699,
+        "delta_pred": -2.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "pyridine-like"
+        ]
+      },
+      {
+        "i": 4,
+        "smiles": "C(/C=C\\C1c2ccc3ccccc3c2-c2c1ccc1ccccc21)=C1c2ccc3ccccc3c2-c2c1ccc1ccccc21",
+        "base_pred": 3.6,
+        "target": 6.639999866485596,
+        "gap": 3.0399998664855956,
+        "delta_pred": 0.19999999999999973,
+        "moved": true,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 5,
+        "smiles": "C(=C\\[As](c1ccccc1)c1ccccc1)/P(c1ccccc1)c1ccccc1",
+        "base_pred": 3.6,
+        "target": 5.900000095367432,
+        "gap": 2.3000000953674316,
+        "delta_pred": 0.19999999999999973,
+        "moved": true,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 6,
+        "smiles": "C(CCc1nnn[nH]1)Cc1nnn[nH]1",
+        "base_pred": 2.5,
+        "target": 5.009999990463257,
+        "gap": 2.509999990463257,
+        "delta_pred": 0.10000000000000009,
+        "moved": true,
+        "n_ioniz": 1,
+        "groups": [
+          "pyridine-like"
+        ]
+      },
+      {
+        "i": 8,
+        "smiles": "C/C(=C\\Cc1c(C)c(O)c2ccccc2c1O)CCCC(C)CCCC(C)CCCC(C)C",
+        "base_pred": 3.6,
+        "target": 5.599999904632568,
+        "gap": 1.9999999046325683,
+        "delta_pred": -0.5,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "phenol"
+        ]
+      },
+      {
+        "i": 11,
+        "smiles": "C/C(=N\\O)c1ccncc1",
+        "base_pred": 10.1,
+        "target": 15.770000457763672,
+        "gap": 5.670000457763672,
+        "delta_pred": 0.09999999999999964,
+        "moved": true,
+        "n_ioniz": 1,
+        "groups": [
+          "pyridine-like"
+        ]
+      },
+      {
+        "i": 13,
+        "smiles": "C/C(O)=C1\\CCCC1=O",
+        "base_pred": 3.2,
+        "target": 5.579999923706055,
+        "gap": 2.3799999237060545,
+        "delta_pred": 0.3999999999999999,
+        "moved": true,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 15,
+        "smiles": "C/C=[N+](\\[O-])O",
+        "base_pred": 4.0,
+        "target": 4.809999942779541,
+        "gap": 0.809999942779541,
+        "delta_pred": -0.3999999999999999,
+        "moved": false,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 18,
+        "smiles": "C1=C(c2ccccc2)CC(c2ccccc2)=C1",
+        "base_pred": 4.6,
+        "target": 3.4800000190734863,
+        "gap": 1.1199999809265133,
+        "delta_pred": -0.09999999999999964,
+        "moved": true,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 20,
+        "smiles": "C1=Cc2nc1nc1ccc(nc3nc(nc4ccc(n2)[nH]4)C=C3)[nH]1",
+        "base_pred": 8.3,
+        "target": 3.0,
+        "gap": 5.300000000000001,
+        "delta_pred": -0.10000000000000142,
+        "moved": true,
+        "n_ioniz": 1,
+        "groups": [
+          "pyridine-like"
+        ]
+      },
+      {
+        "i": 21,
+        "smiles": "C1=Nc2ccccc2CN1",
+        "base_pred": 8.2,
+        "target": 11.029999732971191,
+        "gap": 2.829999732971192,
+        "delta_pred": 0.40000000000000036,
+        "moved": true,
+        "n_ioniz": 1,
+        "groups": [
+          "amine_secondary"
+        ]
+      },
+      {
+        "i": 24,
+        "smiles": "C1CCC2=NCCCN2CC1",
+        "base_pred": 4.0,
+        "target": 9.920000076293945,
+        "gap": 5.920000076293945,
+        "delta_pred": -0.3999999999999999,
+        "moved": false,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 27,
+        "smiles": "C1CNC1",
+        "base_pred": 10.4,
+        "target": 9.5,
+        "gap": 0.9000000000000004,
+        "delta_pred": -0.20000000000000107,
+        "moved": true,
+        "n_ioniz": 1,
+        "groups": [
+          "amine_secondary"
+        ]
+      },
+      {
+        "i": 28,
+        "smiles": "C1CNCCN1",
+        "base_pred": 8.0,
+        "target": 5.099999904632568,
+        "gap": 2.9000000953674316,
+        "delta_pred": -0.2999999999999998,
+        "moved": true,
+        "n_ioniz": 1,
+        "groups": [
+          "amine_secondary"
+        ]
+      },
+      {
+        "i": 29,
+        "smiles": "C=C(C(=O)O)c1cccc([N+](=O)[O-])c1",
+        "base_pred": 4.2,
+        "target": 7.440000057220459,
+        "gap": 3.240000057220459,
+        "delta_pred": 0.2999999999999998,
+        "moved": true,
+        "n_ioniz": 1,
+        "groups": [
+          "carboxyl"
+        ]
+      },
+      {
+        "i": 32,
+        "smiles": "C=C(O)O",
+        "base_pred": 3.6,
+        "target": 6.349999904632568,
+        "gap": 2.7499999046325683,
+        "delta_pred": -0.10000000000000009,
+        "moved": false,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 36,
+        "smiles": "C=CCc1ccccc1O",
+        "base_pred": 8.2,
+        "target": 11.460000038146973,
+        "gap": 3.2600000381469734,
+        "delta_pred": -0.1999999999999993,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "phenol"
+        ]
+      },
+      {
+        "i": 39,
+        "smiles": "C=CSc1nc2ccccc2[nH]1",
+        "base_pred": 8.0,
+        "target": 9.0,
+        "gap": 1.0,
+        "delta_pred": 1.0,
+        "moved": true,
+        "n_ioniz": 2,
+        "groups": [
+          "pyridine-like",
+          "imidazole"
+        ]
+      }
+    ],
+    "nonresponsive": [
+      {
+        "i": 0,
+        "smiles": "Brc1c[nH]nc1Br",
+        "base_pred": 1.0,
+        "target": 0.16999995708465576,
+        "gap": 0.8300000429153442,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "pyridine-like"
+        ]
+      },
+      {
+        "i": 2,
+        "smiles": "Brc1cccnc1",
+        "base_pred": 8.0,
+        "target": 11.0600004196167,
+        "gap": 3.060000419616699,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "pyridine-like"
+        ]
+      },
+      {
+        "i": 3,
+        "smiles": "C#CCN",
+        "base_pred": 10.2,
+        "target": 7.659999847412109,
+        "gap": 2.54000015258789,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "amine_primary"
+        ]
+      },
+      {
+        "i": 7,
+        "smiles": "C(c1nnn[nH]1)c1nnn[nH]1",
+        "base_pred": 4.0,
+        "target": 4.640000104904175,
+        "gap": 0.6400001049041748,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "pyridine-like"
+        ]
+      },
+      {
+        "i": 9,
+        "smiles": "C/C(=N/O)c1cc([N+](=O)[O-])ccc1O",
+        "base_pred": 10.2,
+        "target": 13.130000114440918,
+        "gap": 2.9300001144409187,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "phenol"
+        ]
+      },
+      {
+        "i": 10,
+        "smiles": "C/C(=N\\O)c1cc(Cl)ccc1O",
+        "base_pred": 2.0,
+        "target": 11.600000381469727,
+        "gap": 9.600000381469727,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "phenol"
+        ]
+      },
+      {
+        "i": 12,
+        "smiles": "C/C(O)=C/Cl",
+        "base_pred": 10.0,
+        "target": 12.0,
+        "gap": 2.0,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 14,
+        "smiles": "C/C=C(\\Cl)C(=O)O",
+        "base_pred": 8.0,
+        "target": 7.900000095367432,
+        "gap": 0.09999990463256836,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "carboxyl"
+        ]
+      },
+      {
+        "i": 16,
+        "smiles": "C/N=C/c1c(COP(=O)(O)O)cnc(C)c1O",
+        "base_pred": 2.0,
+        "target": 5.819999933242798,
+        "gap": 3.819999933242798,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 3,
+        "groups": [
+          "phenol",
+          "pyridine-like",
+          "phosphoric_acid"
+        ]
+      },
+      {
+        "i": 17,
+        "smiles": "C/N=C1/NCC(=O)N1C",
+        "base_pred": 4.7,
+        "target": 5.400000095367432,
+        "gap": 0.7000000953674315,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "amine_secondary"
+        ]
+      },
+      {
+        "i": 19,
+        "smiles": "C1=C(c2ccco2)C2CCC1N2",
+        "base_pred": 3.6,
+        "target": 6.739999771118164,
+        "gap": 3.139999771118164,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "amine_secondary"
+        ]
+      },
+      {
+        "i": 22,
+        "smiles": "C1CC1c1nnn[nH]1",
+        "base_pred": 8.2,
+        "target": 7.329999923706055,
+        "gap": 0.8700000762939446,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "pyridine-like"
+        ]
+      },
+      {
+        "i": 23,
+        "smiles": "C1CCC(P(C2CCCCC2)C2CCCCC2)CC1",
+        "base_pred": 10.2,
+        "target": 12.5,
+        "gap": 2.3000000000000007,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 25,
+        "smiles": "C1CCN(N2CCCCC2)CC1",
+        "base_pred": 10.0,
+        "target": 7.0,
+        "gap": 3.0,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 26,
+        "smiles": "C1CN=C2NCCN2C1",
+        "base_pred": 9.0,
+        "target": 5.799999952316284,
+        "gap": 3.200000047683716,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "amine_secondary"
+        ]
+      },
+      {
+        "i": 30,
+        "smiles": "C=C(C(=O)O)c1ccccc1",
+        "base_pred": 3.0,
+        "target": 11.649999618530273,
+        "gap": 8.649999618530273,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "carboxyl"
+        ]
+      },
+      {
+        "i": 31,
+        "smiles": "C=C(N)O",
+        "base_pred": 2.6,
+        "target": 4.670000076293945,
+        "gap": 2.0700000762939452,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "amine_primary"
+        ]
+      },
+      {
+        "i": 33,
+        "smiles": "C=C(O)c1cccc(Cl)c1",
+        "base_pred": 1.8,
+        "target": 0.6100000143051147,
+        "gap": 1.1899999856948853,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 34,
+        "smiles": "C=CCC1(C(C)CCC)C(=O)NC(=O)NC1=O",
+        "base_pred": 9.0,
+        "target": 9.199999809265137,
+        "gap": 0.19999980926513672,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 0,
+        "groups": []
+      },
+      {
+        "i": 35,
+        "smiles": "C=CC[n+]1ccccc1/C=N/O",
+        "base_pred": 4.5,
+        "target": 5.230000019073486,
+        "gap": 0.7300000190734863,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "pyridine-like"
+        ]
+      },
+      {
+        "i": 37,
+        "smiles": "C=COc1ccc(NC(=O)/C=C/C(=O)O)cc1",
+        "base_pred": 1.0,
+        "target": 9.539999961853027,
+        "gap": 8.539999961853027,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "carboxyl"
+        ]
+      },
+      {
+        "i": 38,
+        "smiles": "C=COc1ccc(NC(=O)CCC(=O)O)cc1",
+        "base_pred": 4.5,
+        "target": 10.34000015258789,
+        "gap": 5.840000152587891,
+        "delta_pred": 0.0,
+        "moved": false,
+        "n_ioniz": 1,
+        "groups": [
+          "carboxyl"
+        ]
+      }
+    ]
+  }
+}

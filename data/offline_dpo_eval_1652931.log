@@ -1,0 +1,163 @@
+gcc-11.3.0 loaded successful
+cuda-12.4 loaded successful
+[bon] shard=0/1 n_rows=255 N=8 T=0.9 seed=0
+You are using a model of type qwen3 to instantiate a model of type . This is not supported for all configurations of models and can yield errors.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 49.77it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 49.63it/s]
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+/home/bingxing2/home/scx9kyg/.conda/envs/latentchem_dev/lib/python3.10/site-packages/fast_transformers/feature_maps/fourier_features.py:37: UserWarning: torch.qr is deprecated in favor of torch.linalg.qr and will be removed in a future PyTorch release.
+The boolean parameter 'some' has been replaced with a string parameter 'mode'.
+Q, R = torch.qr(A, some)
+should be replaced with
+Q, R = torch.linalg.qr(A, 'reduced' if some else 'complete') (Triggered internally at /home/bingxing2/ailab/group/ai4bio/zhengpeng/codes/sc/scP/pytorch/aten/src/ATen/native/BatchLinearAlgebra.cpp:2484.)
+  Q, _ = torch.qr(block)
+  rows 2/255
+  rows 22/255
+  rows 42/255
+  rows 62/255
+  rows 82/255
+  rows 102/255
+  rows 122/255
+  rows 142/255
+  rows 162/255
+  rows 182/255
+  rows 202/255
+  rows 222/255
+  rows 242/255
+[bon] unique valid candidates to score = 664
+You are using a model of type qwen3 to instantiate a model of type . This is not supported for all configurations of models and can yield errors.
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:00<00:00, 39.31it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 47.49it/s]
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+{
+ "ckpt": "/home/bingxing2/home/scx9kyg/pKa/runs/offline_dpo_b01_e2/stage3_sub3",
+ "split": "val",
+ "n_rows": 255,
+ "N": 8,
+ "temperature": 0.9,
+ "rows_with_any_valid_candidate": 246,
+ "mean_valid_candidates_per_row": 6.572549019607843,
+ "unique_valid_candidates": 664,
+ "pool_dir_rate": 0.7183426704014939,
+ "rows_with_any_correct_direction": 0.7647058823529411,
+ "rows_all_wrong": 60,
+ "dir_acc_oracle_at_N": 0.7647058823529411,
+ "dir_acc_first_candidate": 0.7137254901960784,
+ "dir_acc_random_candidate": 0.7215686274509804,
+ "mae_oracle_at_N": 1.5930692401960784,
+ "mae_first_candidate": 1.9936439950980391,
+ "noop_mae": 2.2932156862745097
+}
+BON DONE
+{
+  "baseline": {
+    "dir_acc": 0.6784313725490196,
+    "constant_dir_acc": 0.6705882352941176,
+    "copy_rate": 0.050980392156862744
+  },
+  "dpo": {
+    "n": 255,
+    "n_scored": 246,
+    "n_missing": 9,
+    "single_sample_protocol": "first candidate from best_of_n.py; do_sample=True, temperature=0.9, top_p=0.95, max_new_tokens=96, seed=0; missing prediction is source pKa",
+    "dir_acc": 0.7137254901960784,
+    "constant": 3.74,
+    "constant_dir_acc": 0.6705882352941176,
+    "mcnemar_vs_constant": {
+      "constant_only_correct": 28,
+      "model_only_correct": 39,
+      "discordant": 67,
+      "p_exact_two_sided": 0.22154872964481115
+    },
+    "copy_rate": 0.00392156862745098,
+    "n_copy": 1,
+    "best_of_8": {
+      "n_scored": 246,
+      "dir_acc_scored_only": 0.7926829268292683,
+      "dir_acc_all_missing_noop": 0.7647058823529411,
+      "selection": "oracle minimum |PkaHead prediction - target| among eight samples; diagnostic only, not single-sample deployment"
+    }
+  },
+  "all_pass": false,
+  "oracle_sensitivity": {
+    "constant": 3.28,
+    "constant_dir_acc": 0.6784313725490196,
+    "best_plateau": [
+      3.28,
+      3.87
+    ],
+    "dpo_mcnemar": {
+      "constant_only_correct": 36,
+      "model_only_correct": 45,
+      "discordant": 81,
+      "p_exact_two_sided": 0.3741744176047079
+    },
+    "limitation": "Post-hoc because this constant is selected on the same held-out rows; not the primary test."
+  }
+}
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 298.06it/s]
+
+
+
+============ Job 1652931 Performance Details ============
+JobID: 1652931
+User: scx9kyg
+Nodes、GPU: paraai-n32-h-01-agent-38: 2
+Time Range: 2026-11-14 03:41:11 - 2026-11-14 03:57:27
+Running time: 0d0H16M16S
+GPU Util: 33.91 %
+GMem Util: 43.33 %
+GMemBW Util: 13.24 %
+Tensor Core Util: 5.65 %
+Tensor IMMA Util: N/A
+Tensor HMMA Util: N/A
+Tensor DFMA Util: N/A
+FP64 Util: 0 %
+FP32 Util: 0.90 %
+FP16 Util: 0 %
+GPCIE RX: 34.12 MB/s
+GPCIE TX: 7.21 MB/s
+GNVLINK: N/A
+GPU Power: 81.58 W
+GPU Temperature: 36.76 °C
+
+Additional Performance Data:
+--- flops performance(avg to single card) ---
+|- fp64: 0 TFlops
+|- fp32: 0 TFlops
+|- fp16: 0 TFlops
+|- tensor: 14 TFlops
+> |- GMEMBW/F: 14,668 B/MF
+> |- NVLINK/F: No Data
+> |- IB_TX/F: 0 B/MF
+> |- IB_RX/F: 0 B/MF
+> |- PCIE_TX/F: 0 B/MF
+> |- PCIE_RX/F: 2 B/MF
+=========================================================

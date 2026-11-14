@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Fixed training-budget ablations. SFT uses its original \texttt{eval\_gen} protocol; DPO uses the first sampled candidate. Both retain all 255 rows with missing predictions as source/no-op and use the fixed train-selected constant 3.74. $p$ is the exact two-sided McNemar test against that constant; cross-protocol rankings are not implied.}
+\label{tab:training_budget}
+\small
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Model & Epochs & Scored & Direction & $p$ vs constant & Copy rate \\
+\midrule
+Rejection SFT & 1 & 252/255 & 0.6863 & 0.7239 & 0.1216 \\
+Rejection SFT & 3 & 242/255 & 0.6510 & 0.6488 & 0.0784 \\
+\midrule
+Offline DPO & 2 & 246/255 & 0.7137 & 0.2215 & 0.0039 \\
+Offline DPO & 4 & 226/255 & 0.6353 & 0.3742 & 0.0039 \\
+\bottomrule
+\end{tabular}
+\end{table}

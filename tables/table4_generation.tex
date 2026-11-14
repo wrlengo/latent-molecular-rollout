@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\caption{Generation results with separated evaluation protocols. The all-row direction comparison uses the same 255 rows for gen2-final, SFT, and the train-selected constant $3.74$, with missing single-sample predictions treated as no-op; SFT does not have a detected advantage over the constant (34 constant-only versus 38 SFT-only correct, exact McNemar $p=0.7239$). The separate paired gen2-final/SFT comparison uses the 235 both-scored rows (direction $p=0.00418$); its MAE cells therefore share one denominator. SFT Best-of-8 is an oracle diagnostic on all 255 rows, not a deployable selector. The strict no-op reference has no direction prediction and is N/A rather than a direction baseline.}
+\label{tab:generation}
+\small
+\begin{tabular}{@{}p{0.29\linewidth}cccc@{}}
+\toprule
+Metric & gen2-final & SFT single & SFT Best-of-8 & Train-selected constant \\
+\midrule
+Direction accuracy (all $n=255$; missing=no-op) & 0.5922 & 0.6863 & 0.8000 (oracle) & 0.6706 \\
+Direction accuracy (paired $n=235$) & 0.6426 & \textbf{0.6936} & --- & --- \\
+Target MAE (paired $n=235$) & 2.424 & \textbf{2.190} & --- & --- \\
+Best-of-8 target MAE (oracle $n=255$) & --- & --- & 1.313 & --- \\
+Unique valid molecules & 227 & 241 & --- & --- \\
+Copy rate & 0.051 & 0.122 & --- & --- \\
+\midrule
+\multicolumn{5}{l}{Separate no-op reference (n=255): strict direction N/A; target MAE = 2.293.} \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,13 @@
+{
+  "ckpt": "/home/bingxing2/home/scx9kyg/pKa/runs/v3_Bp_answer_head_fix/stage1",
+  "n": 1151,
+  "mae_normal": 2.350794971545917,
+  "mae_zero": 2.8068690415856943,
+  "delta": 0.4560740700397772,
+  "pred_std_normal": 1.7308464971232094,
+  "pred_std_zero": 0.05677932908181569,
+  "pred_mean_normal": 5.37014009556907,
+  "pred_mean_zero": 4.8954984795829715,
+  "gt_mean": 5.5798609983936585,
+  "gt_std": 3.3786942088531644
+}

@@ -1,0 +1,167 @@
+[
+ {
+  "idx": 0,
+  "smiles": "Br",
+  "gt": -10.0
+ },
+ {
+  "idx": 16,
+  "smiles": "C",
+  "gt": 27.0
+ },
+ {
+  "idx": 17,
+  "smiles": "C#C",
+  "gt": 21.7
+ },
+ {
+  "idx": 18,
+  "smiles": "C#CC",
+  "gt": 22.7
+ },
+ {
+  "idx": 27,
+  "smiles": "C#CCF",
+  "gt": 21.1
+ },
+ {
+  "idx": 28,
+  "smiles": "C#CCO",
+  "gt": -3.63
+ },
+ {
+  "idx": 64,
+  "smiles": "C=CCl",
+  "gt": 31.0
+ },
+ {
+  "idx": 70,
+  "smiles": "C=O",
+  "gt": -8.2
+ },
+ {
+  "idx": 73,
+  "smiles": "CC",
+  "gt": 30.0
+ },
+ {
+  "idx": 74,
+  "smiles": "CC#N",
+  "gt": -10.0
+ },
+ {
+  "idx": 197,
+  "smiles": "CC=O",
+  "gt": -8.0
+ },
+ {
+  "idx": 198,
+  "smiles": "CCC",
+  "gt": 33.0
+ },
+ {
+  "idx": 199,
+  "smiles": "CCC#N",
+  "gt": -4.13
+ },
+ {
+  "idx": 227,
+  "smiles": "CCCCO",
+  "gt": 16.1
+ },
+ {
+  "idx": 232,
+  "smiles": "CCCO",
+  "gt": 16.1
+ },
+ {
+  "idx": 239,
+  "smiles": "CCO",
+  "gt": -4.05
+ },
+ {
+  "idx": 240,
+  "smiles": "CCOC",
+  "gt": -2.6
+ },
+ {
+  "idx": 258,
+  "smiles": "CCOCC",
+  "gt": -2.39
+ },
+ {
+  "idx": 272,
+  "smiles": "CCS",
+  "gt": -6.6
+ },
+ {
+  "idx": 273,
+  "smiles": "CCSC",
+  "gt": -6.85
+ },
+ {
+  "idx": 282,
+  "smiles": "CCSCC",
+  "gt": -5.2
+ },
+ {
+  "idx": 359,
+  "smiles": "CO",
+  "gt": -2.3
+ },
+ {
+  "idx": 360,
+  "smiles": "COC",
+  "gt": -2.48
+ },
+ {
+  "idx": 381,
+  "smiles": "COC=O",
+  "gt": -5.21
+ },
+ {
+  "idx": 457,
+  "smiles": "CSC",
+  "gt": -5.4
+ },
+ {
+  "idx": 461,
+  "smiles": "CSCO",
+  "gt": -5.0
+ },
+ {
+  "idx": 631,
+  "smiles": "Cl",
+  "gt": -7.0
+ },
+ {
+  "idx": 634,
+  "smiles": "ClCCl",
+  "gt": 24.0
+ },
+ {
+  "idx": 703,
+  "smiles": "I",
+  "gt": -12.0
+ },
+ {
+  "idx": 747,
+  "smiles": "NO",
+  "gt": -7.0
+ },
+ {
+  "idx": 921,
+  "smiles": "O=CO",
+  "gt": -8.8
+ },
+ {
+  "idx": 1047,
+  "smiles": "OCO",
+  "gt": -2.79
+ },
+ {
+  "idx": 1073,
+  "smiles": "P",
+  "gt": -14.0
+ }
+]

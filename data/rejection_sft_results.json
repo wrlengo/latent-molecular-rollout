@@ -1,0 +1,205 @@
+{
+  "interpretation": "Oracle-best distillation, not direction-correct-only rejection SFT; all candidates and final scoring use the repaired base pKa oracle.",
+  "direction_definition": "strict (pred_pka-src_pka)*(tgt_pka-src_pka)>0; an exact source/no-op prediction is always direction-incorrect",
+  "baseline_clarification": "0.642553 is gen2-final single-sample accuracy, not no-op accuracy; the paired p=0.00418 and MAE CI compare SFT with gen2-final, not with no-op.",
+  "no_op_reference": {
+    "n": 255,
+    "direction_accuracy": null,
+    "direction_note": "N/A by reporting convention; the strict direction predicate is false for an exact source prediction",
+    "mae_all_255": 2.2932156862745097,
+    "mae_gen2_scored_235": 2.292595744680851,
+    "mae_sft_scored_252": 2.2969841269841265
+  },
+  "artifact_sha256": {
+    "gen2f_val_rescored.jsonl": "d002640af770e67d171ad0f2cb5fce0b5a58e8fe97f5c80f23bc4e93a705e2d0",
+    "rej1_val_rescored.jsonl": "088f71d46f37fa5a15ee07d187cf1c30495671324f018ca7b73ddf8c8d977813",
+    "bon_gen2f_val_n8.json": "8d9eaa192823fdd051689e2890d9aa895bb55a7adc43f002be1663ca8115b24e",
+    "bon_rej1_val_n8.json": "fb8f868a68e10bbecd8087dba8ef23e59ff0a56c1a6472147ec8567b4c6a5d9e",
+    "rej1_anchor_val.json": "5029bc51b9d7004efdebc23e9b8a2d04a112def5b1c8e42177a0f3fab892e6af",
+    "rejection_sft_train_summary.json": "bc0a722f4e2fb8939107efab0a77af7d09015002f76658621bddbf640b994278",
+    "offline_dpo_results.json": "5dc2be12448a28d3f70a62184d1b57db8b5d098ed6f183de09b6501ea0dbaf98",
+    "offline_dpo_val_n8.json": "ff065c49c1069eeb21408e5bd170598e6b1cead822f7cbda58d3696464f00bd4",
+    "candidates/bon_gen2f_train_n8_shard0.json": "fb32935d43396a5cf3a865e7ce4c5473084989306fca9656fdebaa00508353e8",
+    "candidates/bon_gen2f_train_n8_shard1.json": "298ddb3d5001e3c89a4e2f32e73b52f6e54a17dc8ec8a9718e9620e96c3b30a0",
+    "candidates/bon_gen2f_train_n8_shard2.json": "ad51d9bbc2fabd8c30e205cb22cad990226c00d00cd2f108a89d473b442869cd",
+    "candidates/bon_gen2f_train_n8_shard3.json": "2fbbc2d71ea26991cdb620755ea62ba5c6c3952539ae05a962fb99c5f1d5116f"
+  },
+  "checkpoints": {
+    "gen2_final": "/home/bingxing2/home/scx9kyg/pKa/runs/v3_C_gen2/stage3_sub3",
+    "oracle_best_sft": "/home/bingxing2/home/scx9kyg/pKa/runs/v3_C_gen2_rej1/stage3_sub3"
+  },
+  "training_selection": {
+    "input_rows": 2295,
+    "sft_rows": 2295,
+    "dropped_rows": 0,
+    "dropped_indices": [],
+    "train_pool_rows_with_any_correct_direction": 0.8135076252723311,
+    "train_pool_all_wrong_rows": 428,
+    "selected_dir_acc": 0.8135076252723311,
+    "selected_mae_vs_target": 1.2825051062091504,
+    "selected_copy_rate": 0.01568627450980392,
+    "mean_valid_candidates": 7.479738562091503,
+    "interpretation_limit": "Rows without a direction-correct candidate were retained using the minimum-target-error candidate. This run is oracle-best distillation, not direction-correct-only rejection SFT."
+  },
+  "single_sample": {
+    "gen2_final": {
+      "n": 255,
+      "n_scored": 235,
+      "unique_gen": 227,
+      "validity": 0.9215686274509803,
+      "tanimoto": 0.5557463852740194,
+      "direction_accuracy": 0.6425531914893617,
+      "mae_vs_target": 2.4237765957446813,
+      "copy_rate": 0.050980392156862744,
+      "best_constant_scored_subset": {
+        "direction_accuracy": 0.6680851063829787,
+        "direction_constant": 3.86,
+        "mae": 2.696255319148936,
+        "mae_constant": 4.53
+      }
+    },
+    "oracle_best_sft": {
+      "n": 255,
+      "n_scored": 252,
+      "unique_gen": 241,
+      "validity": 0.9882352941176471,
+      "tanimoto": 0.5806239053821459,
+      "direction_accuracy": 0.6944444444444444,
+      "mae_vs_target": 2.177793201264881,
+      "copy_rate": 0.12156862745098039,
+      "best_constant_scored_subset": {
+        "direction_accuracy": 0.6746031746031746,
+        "direction_constant": 3.28,
+        "mae": 2.6506746031746027,
+        "mae_constant": 4.43
+      }
+    },
+    "paired_comparison": {
+      "n_both_scored": 235,
+      "base_direction_accuracy": 0.6425531914893617,
+      "new_direction_accuracy": 0.6936170212765957,
+      "mcnemar": {
+        "base_only_correct": 2,
+        "new_only_correct": 14,
+        "two_sided_exact_p": 0.004180908203125
+      },
+      "base_mae": 2.4237765957446813,
+      "new_mae": 2.1897106881648933,
+      "new_minus_base_mae": -0.2340659075797872,
+      "new_minus_base_mae_pair_bootstrap_95ci": [
+        -0.36050896151928197,
+        -0.10903680601728728
+      ],
+      "ci_limit": "Pair-level bootstrap on the validation pairs; not an external replication."
+    },
+    "train_selected_constant_all_255": {
+      "constant": 3.74,
+      "selected_on": "2,295 training candidate rows only; 0.01 grid from -5 to 15; lower plateau edge",
+      "train_direction_accuracy": 0.6745098039215687,
+      "best_plateau": [
+        3.74,
+        3.74
+      ],
+      "n": 255,
+      "missing_prediction_rule": "source/no-op; retained in all 255 denominators",
+      "constant_n_correct": 171,
+      "constant_direction_accuracy": 0.6705882352941176,
+      "gen2_final": {
+        "n": 255,
+        "n_scored": 235,
+        "n_missing_noop": 20,
+        "n_correct": 151,
+        "direction_accuracy": 0.592156862745098,
+        "mae_all_rows_missing_noop": 2.4141078431372547,
+        "constant_only_correct": 52,
+        "model_only_correct": 32,
+        "two_sided_exact_p": 0.037529533634413165
+      },
+      "oracle_best_sft": {
+        "n": 255,
+        "n_scored": 252,
+        "n_missing_noop": 3,
+        "n_correct": 175,
+        "direction_accuracy": 0.6862745098039216,
+        "mae_all_rows_missing_noop": 2.175427006740196,
+        "constant_only_correct": 34,
+        "model_only_correct": 38,
+        "two_sided_exact_p": 0.723948145746914
+      }
+    }
+  },
+  "dpo_protocol_crosscheck": {
+    "rej1_from_raw_bank": {
+      "n": 255,
+      "n_scored": 255,
+      "n_missing_noop": 0,
+      "n_correct": 173,
+      "direction_accuracy": 0.6784313725490196,
+      "mae_all_rows_missing_noop": 2.2880453431372545,
+      "constant_only_correct": 36,
+      "model_only_correct": 38,
+      "two_sided_exact_p": 0.9075606176124987
+    },
+    "offline_dpo_from_raw_bank": {
+      "n": 255,
+      "n_scored": 246,
+      "n_missing_noop": 9,
+      "n_correct": 182,
+      "direction_accuracy": 0.7137254901960784,
+      "mae_all_rows_missing_noop": 1.9936439950980394,
+      "constant_only_correct": 28,
+      "model_only_correct": 39,
+      "two_sided_exact_p": 0.22154872964481115
+    },
+    "dpo_vs_rej1_mcnemar": {
+      "base_only_correct": 14,
+      "new_only_correct": 23,
+      "two_sided_exact_p": 0.18774155899882317
+    },
+    "dpo_direction_wilson_ci95": [
+      0.6553957382749429,
+      0.7657114541223422
+    ],
+    "reporting_rule": "0.72 is a design reference, not a statistical pass/fail threshold. The primary inferential test is exact McNemar against the train-selected constant; copy rate remains a design-bound diagnostic."
+  },
+  "best_of_8": {
+    "gen2_final": {
+      "n": 255,
+      "n_with_valid_candidate": 255,
+      "oracle_at_8": {
+        "direction_accuracy": 0.7529411764705882,
+        "mae_vs_target": 1.4999773284313727
+      },
+      "first_candidate": {
+        "direction_accuracy": 0.6313725490196078,
+        "mae_vs_target": 2.4611151960784317
+      },
+      "random_candidate_seeded_by_row": {
+        "direction_accuracy": 0.6274509803921569,
+        "mae_vs_target": 2.422117647058824
+      }
+    },
+    "oracle_best_sft": {
+      "n": 255,
+      "n_with_valid_candidate": 255,
+      "oracle_at_8": {
+        "direction_accuracy": 0.8,
+        "mae_vs_target": 1.3128174019607843
+      },
+      "first_candidate": {
+        "direction_accuracy": 0.6784313725490196,
+        "mae_vs_target": 2.2880453431372545
+      },
+      "random_candidate_seeded_by_row": {
+        "direction_accuracy": 0.6627450980392157,
+        "mae_vs_target": 2.3242941176470584
+      }
+    }
+  },
+  "source_anchor": {
+    "baseline_mae": 1.9616470588235295,
+    "new_mae": 2.143872549019608,
+    "new_minus_baseline": 0.18222549019607848,
+    "pass_change_at_most_0.3": true
+  }
+}

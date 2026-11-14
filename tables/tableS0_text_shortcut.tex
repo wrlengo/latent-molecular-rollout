@@ -1,0 +1,19 @@
+\begin{table}[h]
+\centering
+\caption{Pre-repair text-shortcut diagnosis. The C PkaHead value $1.103$ is recomputed from 24 held-out diagnostic rows; repaired C is evaluated on a different cohort of 1{,}151 test rows after two combined repairs. Modality-conflict values are archived aggregate MAEs ($n=24$), with source and donor ground truth (GT) scored separately. Per-row conflict predictions were not preserved, so no intervals or output-invariance counts are reported. The pre/post values are not a controlled ablation.}
+\label{tab:shortcut}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}rr@{}}
+\toprule
+Condition & Query SMILES & Cohort / evidence & Source MAE & Donor MAE \\
+\midrule
+C pre-repair, \texttt{PkaHead} & present & 24-row probe; recomputed & 1.103 & --- \\
+C repaired, combined repairs & removed & 1{,}151-row test; recomputed & 2.087 & --- \\
+\midrule
+Conflict: base & source & 24-row archived aggregate & 1.17 & 4.06 \\
+Conflict: text $\rightarrow$ donor; molecule $\rightarrow$ source & donor & 24-row archived aggregate & 4.08 & 1.20 \\
+Conflict: features $\rightarrow$ donor; text $\rightarrow$ source & source & 24-row archived aggregate & 1.17 & 4.07 \\
+\bottomrule
+\end{tabular}
+\end{table}

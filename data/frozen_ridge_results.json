@@ -1,0 +1,130 @@
+{
+  "protocol": {
+    "checkpoint": "/home/bingxing2/home/scx9kyg/pKa/runs/v3_C_latent_head_fix/stage3_sub3",
+    "h": "direct PkaHead input; all backbone parameters frozen",
+    "development": "Original train rows sharing a nonempty Murcko scaffold or exact canonical SMILES with test were removed; remaining rows were split by Murcko scaffold with GroupShuffleSplit(test_size=0.15, random_state=42). Empty scaffolds were grouped by exact canonical SMILES.",
+    "alpha_selection": "Minimum validation MAE only; no test metric was used for model selection",
+    "alphas": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0,
+      10000.0,
+      100000.0,
+      1000000.0
+    ],
+    "selected_alpha": 100.0,
+    "pair_rule": "All within-split pairs with |delta pKa| >= 1 and Morgan radius-2 2048-bit Tanimoto >= 0.6; oriented low to high pKa",
+    "cosine": "cos(w_original, h_high-h_low), where w_original = coef_ / StandardScaler.scale_",
+    "evaluation_limit": "Independent fitting relative to the 43 test pairs, but not an untouched external test because these pairs informed earlier exploratory diagnostics"
+  },
+  "counts": {
+    "original_train": 9202,
+    "clean_train": 3369,
+    "removed_train_test_overlap": 5833,
+    "fit": 2855,
+    "validation": 514,
+    "test": 1151,
+    "fit_pairs": 381,
+    "test_pairs": 43
+  },
+  "alpha_validation": [
+    {
+      "alpha": 0.01,
+      "fit_mae": 1.0102037280080303,
+      "validation_mae": 2.709700438288196,
+      "lsqr_n_iter": 360
+    },
+    {
+      "alpha": 0.1,
+      "fit_mae": 1.0013554833437954,
+      "validation_mae": 2.6908094873579387,
+      "lsqr_n_iter": 364
+    },
+    {
+      "alpha": 1.0,
+      "fit_mae": 0.9456144636545832,
+      "validation_mae": 2.5824489282618064,
+      "lsqr_n_iter": 423
+    },
+    {
+      "alpha": 10.0,
+      "fit_mae": 1.2342343297475482,
+      "validation_mae": 2.3068927127744727,
+      "lsqr_n_iter": 309
+    },
+    {
+      "alpha": 100.0,
+      "fit_mae": 1.622545779959646,
+      "validation_mae": 2.2139855914491915,
+      "lsqr_n_iter": 134
+    },
+    {
+      "alpha": 1000.0,
+      "fit_mae": 1.8784328847523328,
+      "validation_mae": 2.2506892411110755,
+      "lsqr_n_iter": 60
+    },
+    {
+      "alpha": 10000.0,
+      "fit_mae": 2.0342143179212684,
+      "validation_mae": 2.3219451434830574,
+      "lsqr_n_iter": 26
+    },
+    {
+      "alpha": 100000.0,
+      "fit_mae": 2.1244905788484054,
+      "validation_mae": 2.38426888628649,
+      "lsqr_n_iter": 11
+    },
+    {
+      "alpha": 1000000.0,
+      "fit_mae": 2.2245791186567154,
+      "validation_mae": 2.469579716039104,
+      "lsqr_n_iter": 5
+    }
+  ],
+  "mae": {
+    "fit": 1.622545779959646,
+    "validation": 2.2139855914491915,
+    "test": 2.259370113939021,
+    "existing_pka_head_test": 2.0871812460295125,
+    "train_mean_baseline_test": 2.88195832058153
+  },
+  "ridge_low_to_high_cosine": {
+    "fit": {
+      "n": 381,
+      "mean": 3.9831025285734815e-05,
+      "median": 4.0892376551699693e-05,
+      "median_bootstrap_95ci": [
+        3.174534240369694e-05,
+        4.676937055994135e-05
+      ]
+    },
+    "test": {
+      "n": 43,
+      "mean": 1.993746200124801e-05,
+      "median": 1.182296724329427e-05,
+      "median_bootstrap_95ci": [
+        -3.1384569606692922e-06,
+        3.478086756530227e-05
+      ]
+    }
+  },
+  "existing_pka_head_low_to_high_cosine_test": {
+    "n": 43,
+    "mean": 0.057690614669280514,
+    "median": 0.10741908848285675,
+    "median_bootstrap_95ci": [
+      -0.001311440602876246,
+      0.1752309650182724
+    ]
+  },
+  "decision": {
+    "category": "linear_readout_does_not_recover_direction",
+    "run_metric_readout": true,
+    "note": "Decision uses median cosine, matching the existing G4 summary; thresholds alone do not establish causality."
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "experiment": "offline DPO of the molecular generator LoRA; no reranker in single-sample metrics",
+  "job_ids": {
+    "train": "1653235",
+    "eval": "1653789"
+  },
+  "beta": 0.1,
+  "primary_constant_protocol": {
+    "selected_on": "training candidate rows only",
+    "grid": "0.01 increments from -5 to 15; maximize direction accuracy; lower plateau edge",
+    "constant": 3.74,
+    "train_dir_acc": 0.6745098039215687,
+    "best_plateau": [
+      3.74,
+      3.74
+    ]
+  },
+  "baseline_rej1_recomputed": {
+    "n": 255,
+    "n_scored": 255,
+    "n_missing": 0,
+    "single_sample_protocol": "first candidate from best_of_n.py; do_sample=True, temperature=0.9, top_p=0.95, max_new_tokens=96, seed=0; missing prediction is source pKa",
+    "dir_acc": 0.6784313725490196,
+    "constant": 3.74,
+    "constant_dir_acc": 0.6705882352941176,
+    "mcnemar_vs_constant": {
+      "constant_only_correct": 36,
+      "model_only_correct": 38,
+      "discordant": 74,
+      "p_exact_two_sided": 0.9075606176124987
+    },
+    "copy_rate": 0.050980392156862744,
+    "n_copy": 13,
+    "best_of_8": {
+      "n_scored": 255,
+      "dir_acc_scored_only": 0.8,
+      "dir_acc_all_missing_noop": 0.8,
+      "selection": "oracle minimum |PkaHead prediction - target| among eight samples; diagnostic only, not single-sample deployment"
+    }
+  },
+  "offline_dpo": {
+    "n": 255,
+    "n_scored": 226,
+    "n_missing": 29,
+    "single_sample_protocol": "first candidate from best_of_n.py; do_sample=True, temperature=0.9, top_p=0.95, max_new_tokens=96, seed=0; missing prediction is source pKa",
+    "dir_acc": 0.6352941176470588,
+    "constant": 3.74,
+    "constant_dir_acc": 0.6705882352941176,
+    "mcnemar_vs_constant": {
+      "constant_only_correct": 45,
+      "model_only_correct": 36,
+      "discordant": 81,
+      "p_exact_two_sided": 0.3741744176047079
+    },
+    "copy_rate": 0.00392156862745098,
+    "n_copy": 1,
+    "best_of_8": {
+      "n_scored": 226,
+      "dir_acc_scored_only": 0.7654867256637168,
+      "dir_acc_all_missing_noop": 0.6784313725490196,
+      "selection": "oracle minimum |PkaHead prediction - target| among eight samples; diagnostic only, not single-sample deployment"
+    }
+  },
+  "pass_criteria": {
+    "single_sample_dir_acc>=0.72": false,
+    "McNemar_vs_train_selected_constant_p<0.05": false,
+    "copy_rate<=0.15": true
+  },
+  "all_pass": false,
+  "held_out_oracle_constant_sensitivity": {
+    "constant": 3.28,
+    "constant_dir_acc": 0.6784313725490196,
+    "best_plateau": [
+      3.28,
+      3.87
+    ],
+    "dpo_mcnemar": {
+      "constant_only_correct": 54,
+      "model_only_correct": 43,
+      "discordant": 97,
+      "p_exact_two_sided": 0.30993353423900705
+    },
+    "limitation": "Post-hoc because this constant is selected on the same held-out rows; not the primary test."
+  },
+  "reference_check": {
+    "reported_reference": {
+      "single_sample": 0.678,
+      "constant": 0.529,
+      "p": 0.0042,
+      "best_of_8": 0.8
+    },
+    "interpretation": "0.678 and 0.800 reproduce as first-sample and scored-only Bo8. The existing 0.0042 compares rej1 with the old Gen2 model, not with a constant. The supplied 0.529 constant baseline is not reproduced by the existing analysis or the train-selected direction-optimal constant."
+  },
+  "input_hashes": {
+    "baseline_bank": "fb8f868a68e10bbecd8087dba8ef23e59ff0a56c1a6472147ec8567b4c6a5d9e",
+    "dpo_bank": "1093096ccecfa4db02b2fb1a70ca20ff463d02a4a25a15003111c0aece1bbd58",
+    "train_candidates": {
+      "runs/eval/bon_gen2f_train_n8_shard0.json": "fb32935d43396a5cf3a865e7ce4c5473084989306fca9656fdebaa00508353e8",
+      "runs/eval/bon_gen2f_train_n8_shard1.json": "298ddb3d5001e3c89a4e2f32e73b52f6e54a17dc8ec8a9718e9620e96c3b30a0",
+      "runs/eval/bon_gen2f_train_n8_shard2.json": "ad51d9bbc2fabd8c30e205cb22cad990226c00d00cd2f108a89d473b442869cd",
+      "runs/eval/bon_gen2f_train_n8_shard3.json": "2fbbc2d71ea26991cdb620755ea62ba5c6c3952539ae05a962fb99c5f1d5116f"
+    }
+  },
+  "training": {
+    "algorithm": "offline DPO on the generator LoRA, frozen rej1 reference adapter",
+    "init": "/home/bingxing2/home/scx9kyg/pKa/runs/v3_C_gen2_rej1/stage3_sub3",
+    "pairs": "/home/bingxing2/home/scx9kyg/pKa/offline_dpo/offline_dpo_train_pairs.jsonl",
+    "n_pairs": 2221,
+    "beta": 0.1,
+    "epochs": 4,
+    "learning_rate": 1e-05,
+    "schedule": "cosine with warmup",
+    "warmup_steps": 10,
+    "pair_batch_size_per_device": 1,
+    "grad_accum": 1,
+    "world_size": 4,
+    "global_pairs_per_optimizer_step": 4,
+    "seed": 42,
+    "max_len": 1024,
+    "n_policy_trainable_tensors": 504,
+    "n_policy_trainable_parameters": 43646976,
+    "n_reference_tensors_checked_equal": 504,
+    "initial_adapter_max_abs_difference_after_explicit_clone": 0.0,
+    "policy_initialization": "explicit tensor copy from frozen rej1 reference adapter",
+    "pka_head_and_mm_projector": "PkaHead not instantiated in DPO; projector frozen; final mm_projector.pt copied byte-for-byte from rej1 init",
+    "completed_epochs": 4,
+    "total_optimizer_steps": 2224,
+    "elapsed_seconds": 14986.2408182621,
+    "final_logged_lr": 0.0,
+    "final_logged_loss": 0.00022030525917671184,
+    "final_save_note": "All 2224 optimizer steps completed. The final `shutil.copy2` of the frozen mm_projector.pt into stage3_sub3 was interrupted by a disk-quota error. Policy adapter, tokenizer files, and the per-epoch state record were already written from the same final step. The projector was restored from epoch_4/mm_projector.pt, whose SHA-256 matches the frozen rej1 source 1c94db442982b7a06d2e0348db1fb4a633ffcc2c3994f64d17474a2b38b8b5be. No training step, hyperparameter, or data selection was changed.",
+    "n_history_records": 224,
+    "summary_sha256": "e8b01f5bcce0fb7bd8b6fab452f3d06573568a7c677e7ed66e77add7fb853f8f"
+  },
+  "pair_construction": {
+    "method": "chosen=min absolute PkaHead error; rejected=max absolute PkaHead error",
+    "error_margin_exclusive": 1e-08,
+    "filters": [
+      "Remove exact held-out task, ordered source/target-molecule, or source-molecule overlap before pair construction.",
+      "Canonicalize and deduplicate valid generated candidates within each training row.",
+      "Require at least two unique valid candidates.",
+      "Require a non-copy chosen structure.",
+      "Require rejected absolute error - chosen absolute error > margin.",
+      "No direction-correctness filter is applied to chosen."
+    ],
+    "counts": {
+      "retained": 2221,
+      "fewer_than_two_unique_valid_candidates": 35,
+      "chosen_is_copy": 37,
+      "error_margin_not_exceeded": 2
+    },
+    "n_train_raw": 2295,
+    "n_val_raw": 255,
+    "n_pairs": 2221,
+    "held_out_audit": {
+      "train_rows_with_exact_task_in_val": [],
+      "train_rows_with_ordered_molecule_pair_in_val": [],
+      "train_rows_with_source_molecule_in_val": [],
+      "retained_train_val_exact_task_overlap": 0,
+      "retained_train_val_ordered_molecule_pair_overlap": 0,
+      "retained_train_val_source_molecule_overlap": 0
+    },
+    "chosen_direction_accuracy": 0.8153984691580369,
+    "rejected_direction_accuracy": 0.520036019810896,
+    "chosen_copy_rate": 0.0,
+    "rejected_copy_rate": 0.01530841963079694,
+    "input_hashes": {
+      "runs/eval/bon_gen2f_train_n8_shard0.json": "fb32935d43396a5cf3a865e7ce4c5473084989306fca9656fdebaa00508353e8",
+      "runs/eval/bon_gen2f_train_n8_shard1.json": "298ddb3d5001e3c89a4e2f32e73b52f6e54a17dc8ec8a9718e9620e96c3b30a0",
+      "runs/eval/bon_gen2f_train_n8_shard2.json": "ad51d9bbc2fabd8c30e205cb22cad990226c00d00cd2f108a89d473b442869cd",
+      "runs/eval/bon_gen2f_train_n8_shard3.json": "2fbbc2d71ea26991cdb620755ea62ba5c6c3952539ae05a962fb99c5f1d5116f"
+    },
+    "train_raw": "pka_sft_gen2/train/pka_train.json",
+    "train_raw_sha256": "2199445a76981d8931cce2ccd217eaffc6a6f217da49e30b618de042ee5e3ace",
+    "val_raw": "pka_sft_gen2/val/pka_val.json",
+    "val_raw_sha256": "6eb272bc25394c23103f4964016bfc011fd6810d8d917c09556aa768bf45282f",
+    "output_sha256": "499d3b4e60f768e76dc973d92a5e53d71f807aceed3e2648032098b0f1ae16fb",
+    "summary_sha256": "6a64508a55f75fce584102f622188f168c5e330b3a28d2544ea1f1279d1df5f8"
+  }
+}

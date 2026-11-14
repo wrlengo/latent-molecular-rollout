@@ -1,0 +1,53 @@
+{
+  "pre_repair_c": {
+    "source": "data/fig3_causal.json",
+    "checkpoint": "v3_C_latent_head/stage3_sub3",
+    "cohort": "24 held-out diagnostic probe rows; not the 1,151-row test set",
+    "n": 24,
+    "n_latent_recognized": 1,
+    "mae_ref_head": 1.1034114112456639,
+    "mae_h_head": 1.101539433002472
+  },
+  "repaired_c": {
+    "source": "data/eval_C_fix_test.json",
+    "cohort": "1,151 held-out test rows",
+    "n": 1151,
+    "mae": 2.0869960975351796
+  },
+  "modality_conflict": {
+    "source": "DIAGNOSIS.md",
+    "evidence_status": "archived aggregate summary; per-row conflict predictions were not preserved",
+    "n": 24,
+    "conditions": {
+      "base": {
+        "mae_vs_source": 1.17,
+        "mae_vs_donor": 4.06
+      },
+      "text_donor": {
+        "mae_vs_source": 4.08,
+        "mae_vs_donor": 1.2
+      },
+      "molecule_donor": {
+        "mae_vs_source": 1.17,
+        "mae_vs_donor": 4.07
+      }
+    },
+    "uncertainty_intervals_available": false,
+    "output_invariance_count_available": false
+  },
+  "repair_boundary": {
+    "combined_repairs": [
+      "remove SMILES from the pKa query",
+      "align latent-token IDs and restore all six latent slots"
+    ],
+    "token_repair_source": "data/probe_tokenfix.json",
+    "n_latent_recognized_after_repair": 6,
+    "repairs_separately_ablated": false,
+    "pre_and_post_cohorts_match": false,
+    "interpretation": "The numerical difference between 1.103 and 2.087 is not an isolated estimate of shortcut removal."
+  },
+  "eval_text_truncation": {
+    "evidence_status": "historical engineering note; no independent raw diagnostic artifact preserved",
+    "scope": "text-path scoring only; not a PkaHead-based comparison"
+  }
+}

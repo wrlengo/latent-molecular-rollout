@@ -1,0 +1,9 @@
+{
+  "cheat_detected": true,
+  "history": [],
+  "best": {
+    "anchor": Infinity,
+    "ckpt": null,
+    "epoch": -1
+  }
+}

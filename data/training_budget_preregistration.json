@@ -1,0 +1,58 @@
+{
+  "schema": "pka.training_budget_preregistration.v1",
+  "registered_on": "2026-11-14",
+  "status": "fixed_before_sft3_dpo4_submission",
+  "purpose": "One-shot confirmatory training-budget ablations; no sequential epoch extension or hyperparameter search.",
+  "common": {
+    "held_out_rows": 255,
+    "missing_prediction_rule": "source/no-op retained in the denominator",
+    "constant": 3.74,
+    "constant_selection": "fixed from 2295 training candidate rows on the 0.01 grid; not reselected on held-out rows",
+    "reporting_rule": "0.72 is a design reference, not a statistical significance threshold; exact McNemar against the fixed train-selected constant is the primary inferential test",
+    "schedule_rule": "The existing cosine-schedule recipe is retained and its horizon is set by the declared epoch count; initial learning rate and all other optimization settings are unchanged.",
+    "decision_rule": "Report both budgets regardless of outcome. If the longer-budget result changes the qualitative conclusion, the longer-budget result becomes primary and the shorter-budget result remains in the ablation. No further epoch increase is allowed under this preregistration."
+  },
+  "rejection_sft_3": {
+    "initialization": "runs/v3_C_gen2/stage3_sub3",
+    "data": "pka_sft_gen2_rej/train; reuse the frozen 2295-row oracle-best distillation set without rebuilding",
+    "epochs": 3,
+    "learning_rate": 0.0001,
+    "batch_size_per_device": 2,
+    "grad_accum": 2,
+    "world_size": 4,
+    "lambda_pka": 0.1,
+    "trainable": "generator LoRA and PkaHead under the original Stage-3 training recipe",
+    "selection": "final epoch; no held-out checkpoint selection",
+    "primary_metrics": [
+      "all-row direction accuracy versus the fixed constant",
+      "exact two-sided McNemar p-value versus the fixed constant"
+    ],
+    "secondary_metrics": [
+      "paired direction accuracy and exact McNemar test versus gen2-final on rows scored in both models",
+      "paired absolute-target-error change and bootstrap interval",
+      "source-anchor MAE change"
+    ],
+    "evaluation_protocol": "unchanged eval_gen.py/rescore_gen.py pipeline used for the 1-epoch SFT result"
+  },
+  "offline_dpo_4": {
+    "initialization": "runs/v3_C_gen2_rej1/stage3_sub3 (the original 1-epoch rejection-SFT checkpoint)",
+    "reference": "the same frozen rej1 adapter; explicit tensor equality check at initialization",
+    "pairs": "offline_dpo/offline_dpo_train_pairs.jsonl",
+    "n_pairs": 2221,
+    "epochs": 4,
+    "beta": 0.1,
+    "learning_rate": 0.00001,
+    "warmup_steps": 10,
+    "pair_batch_size_per_device": 1,
+    "grad_accum": 1,
+    "world_size": 4,
+    "seed": 42,
+    "selection": "final epoch; no held-out checkpoint selection",
+    "primary_metrics": [
+      "single-sample direction accuracy and its relation to the 0.72 design reference",
+      "exact two-sided McNemar p-value versus the fixed constant",
+      "copy rate and its relation to the 0.15 design bound"
+    ],
+    "evaluation_protocol": "first candidate from best_of_n.py; do_sample=True, temperature=0.9, top_p=0.95, max_new_tokens=96, seed=0; unchanged from the 2-epoch DPO evaluation"
+  }
+}

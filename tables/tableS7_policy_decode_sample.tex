@@ -1,0 +1,23 @@
+\begin{table}[h]
+\centering
+\caption{Sampled ($T=0.9$, top-$p=0.95$, seed 0) P3 policy-direction decoding on all 80 eligible held-out source molecules. Paired effects are intervened minus baseline learned-oracle predictions, so unchanged sequences have zero effect and count against directional success. Identical outputs retain that zero effect by identity when their shared invalid SMILES cannot be oracle-scored; no changed output lacks a paired oracle score. Checks are validity $\geq0.9$, Tanimoto median $\geq0.6$, direction $\geq0.65$, and median $|\Delta\pka|\in[0.2,1.0]$. The MAE-1.1 PkaHead is a learned oracle, not external or experimental validation. Property/generator PkaHead and projector maximum absolute tensor differences are 0.2456 and 0.0574, respectively.}
+\label{tab:p3_decode_sample}
+\small
+\begin{tabular}{lrc}
+\toprule
+Metric & Value & Check \\
+\midrule
+$h_T$ target cosine, median & 1.0000 & --- \\
+$h_T$ relative error, median & 0.0081 & --- \\
+Generator-readout direction & 0.062 & --- \\
+Generator-readout median $|\Delta\pka|$ & 0.0000 & --- \\
+Intervened SMILES validity & 0.938 & \cmark \\
+Source-anchored Tanimoto, median & 0.514 & \xmark \\
+Changed decoded sequences & 0/80 & --- \\
+Both learned-oracle scored & 75/80 & --- \\
+Paired learned-oracle direction & 0.000 & \xmark \\
+Paired learned-oracle median $|\Delta\pka|$ & 0.0000 & \xmark \\
+Paired learned-oracle fraction in $[0.2,1.0]$ & 0.000 & --- \\
+\bottomrule
+\end{tabular}
+\end{table}

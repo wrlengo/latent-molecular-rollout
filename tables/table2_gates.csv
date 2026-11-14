@@ -1,0 +1,6 @@
+Gate,Result,Reading
+G1 Interpolation monotonicity,1.000 (38/38),Pass
+G2 On-manifold trajectory,off_manifold = 0.072,Pass
+G3 Latent intervention,response = 45%; moved = 30%,Conditional causal
+G4 Gradient–chemistry alignment,median cos = 0.107 (n = 43); weak-direction band,Descriptive
+G5 Direction sign,0.676 (71/105),Pass

@@ -1,0 +1,37 @@
+# LaTeX build artifacts
+main.aux
+main.bbl
+main.blg
+main.fdb_latexmk
+main.fls
+main.log
+main.out
+main.synctex.gz
+*.synctex.gz
+
+# macOS / editor
+.DS_Store
+__pycache__/
+*.pyc
+.vscode/
+
+# Large-model (LLM) artifacts: scripts that require the Qwen backbone or a GPU
+experiments/frozen_readout.py
+experiments/policy_decode.py
+experiments/policy_slot_identity.py
+experiments/offline_dpo/
+experiments/run_policy.sh
+experiments/run_policy_decode.sh
+experiments/run_eval_rejection.sh
+experiments/run_rejection_sft.sh
+
+# Model checkpoints / caches (if ever produced locally)
+*.safetensors
+*.pt
+*.bin
+checkpoints/
+runs/
+
+# Large binary arrays (regenerable from the released JSON/CSV inputs)
+data/h_test.npz
+data/pca_direction_fit.npz

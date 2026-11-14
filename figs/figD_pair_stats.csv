@@ -1,0 +1,5 @@
+dp,tani,full_pairs,full_coverage,train_pairs,train_coverage,test_pairs,test_coverage
+1.5,0.7,503,708,398,572,105,136
+1.5,0.5,10822,5489,9693,4773,1129,716
+2.0,0.7,399,602,319,485,80,117
+2.0,0.5,9309,4987,8380,4347,929,640

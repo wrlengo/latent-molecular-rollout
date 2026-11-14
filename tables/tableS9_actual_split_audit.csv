@@ -1,0 +1,4 @@
+split_pair,n_left,n_right,n_shared_nonempty_scaffolds,n_left_rows_with_shared_scaffold,n_right_rows_with_shared_scaffold,n_shared_exact_canonical_smiles
+train__val,9202,1151,246,5862,880,0
+train__test,9202,1151,247,5833,863,0
+val__test,1151,1151,131,735,722,0

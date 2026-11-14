@@ -1,0 +1,70 @@
+{
+  "protocol": {
+    "space": "z = (h-fit_mean)/fit_std; ridge gradient w_z=w_original*fit_std; displacement d_z=(h_high-h_low)/fit_std",
+    "selection": "Post-hoc sensitivity analysis of the alpha=100 model selected by validation MAE; no model refitting",
+    "decision_rule_for_requested_sensitivity": "test median >=0.2 versus <0.05; intermediate values remain undetermined",
+    "metric_limit": "Whitened cosine changes the geometry and is not the original-h G4 cosine. It diagnoses scaling sensitivity and must not be compared as if it were the same metric.",
+    "latent_identity": "The test latent SHA-256 must equal the value recorded in projection_diagnosis.json."
+  },
+  "artifact_sha256": {
+    "h_train.npz": "8f4157860cf3f9e57297e10d64c9690492ad187536252f32facfe73805613143",
+    "h_test.npz": "8f45b2c98632b77bdec45a25cd8d2f14998df8962cb2cf71650e38ff4a58308b",
+    "ridge_selected_weights.npz": "3428855b98931429049cc663587ff206ae37d8e23c53aee18ca9c09e474838e8",
+    "frozen_ridge_results.json": "333a91ed5de36186785d5d95f916841f3f7dfb16158246fdfa7dccdbf72685d5",
+    "frozen_ridge_test_pairs.csv": "2ea024c9d6749543defa48421788520d32af7675d6ec6f61d7244ae170d23a55",
+    "projection_diagnosis.json": "ba3cea9404f0fd335634c4439f10926dbf7b012b1680d9d000da788688868e1a"
+  },
+  "counts": {
+    "fit": 2855,
+    "test": 1151,
+    "fit_pairs": 381,
+    "test_pairs": 43
+  },
+  "mae_test_unchanged": 2.2593701498002057,
+  "top2_original_h_weight_energy_fraction": 0.9998781334487502,
+  "original_h_cosine": {
+    "fit": {
+      "n": 381,
+      "mean": 3.983102528573482e-05,
+      "median": 4.089237655169968e-05,
+      "median_bootstrap_95ci": [
+        3.1745342403697235e-05,
+        4.676937055994159e-05
+      ]
+    },
+    "test": {
+      "n": 43,
+      "mean": 1.9937462001248008e-05,
+      "median": 1.1822967243294229e-05,
+      "median_bootstrap_95ci": [
+        -3.1384569606692927e-06,
+        3.478086756530234e-05
+      ]
+    }
+  },
+  "whitened_cosine": {
+    "fit": {
+      "n": 381,
+      "mean": 0.005748582340261707,
+      "median": 0.005435848781187218,
+      "median_bootstrap_95ci": [
+        0.004794183729990551,
+        0.007286931601992681
+      ]
+    },
+    "test": {
+      "n": 43,
+      "mean": 0.0032713079061237687,
+      "median": 0.0021711402273907063,
+      "median_bootstrap_95ci": [
+        -0.000467385331447294,
+        0.005206322908877349
+      ]
+    }
+  },
+  "decision": {
+    "category": "whitened_test_median_below_0.05",
+    "original_h_conclusion": "undetermined_due_to_extreme_weight_concentration",
+    "note": "This sensitivity result does not by itself prove or disprove direction recoverability in original h."
+  }
+}

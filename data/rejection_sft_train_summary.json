@@ -1,0 +1,13 @@
+{
+ "input_rows": 2295,
+ "sft_rows": 2295,
+ "dropped_rows": 0,
+ "dropped_indices": [],
+ "train_pool_rows_with_any_correct_direction": 0.8135076252723311,
+ "train_pool_all_wrong_rows": 428,
+ "selected_dir_acc": 0.8135076252723311,
+ "selected_mae_vs_target": 1.2825051062091504,
+ "selected_copy_rate": 0.01568627450980392,
+ "mean_valid_candidates": 7.479738562091503,
+ "interpretation_limit": "Rows without a direction-correct candidate were retained using the minimum-target-error candidate. This run is oracle-best distillation, not direction-correct-only rejection SFT."
+}

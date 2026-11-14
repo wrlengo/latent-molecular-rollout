@@ -1,0 +1,16 @@
+\begin{table}[h]
+\centering
+\caption{Explicit amplitude supervision with $\lambda_{\mathrm{amp}}=1$. The joint criterion requires median cosine $\geq0.3$ and learned-amplitude correlation $>0.5$. Neither any individual seed nor the ensemble satisfies both criteria. These values use the learned per-pair displacement norm, unlike the fixed-step sensitivity analysis.}
+\label{tab:amplitude_supervision}
+\scriptsize
+\begin{tabular}{lccccc}
+\toprule
+Seed & Cos & Learned amp. corr & Median $|\Delta$pKa$|$ & Median step norm & Joint pass \\
+\midrule
+Seed 0 & 0.312 & -0.320 & 2.619 & 1.784 & \xmark \\
+Seed 1 & 0.012 & 0.281 & 11.541 & 3.662 & \xmark \\
+Seed 2 & 0.232 & 0.809 & 2.787 & 1.630 & \xmark \\
+Ensemble & 0.192 & 0.126 & 5.535 & 1.492 & \xmark \\
+\bottomrule
+\end{tabular}
+\end{table}

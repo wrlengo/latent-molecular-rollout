@@ -1,0 +1,48 @@
+{
+ "n_molecules": 12639,
+ "n_scaffolds": 1796,
+ "pure_scaffold_pairs": {
+  "0.5": {
+   "pairs": 4764225
+  },
+  "1.0": {
+   "pairs": 4356459
+  },
+  "1.5": {
+   "pairs": 3992849
+  },
+  "2.0": {
+   "pairs": 3672751
+  },
+  "3.0": {
+   "pairs": 3140877
+  }
+ },
+ "with_tanimoto": {
+  "dP>=1.0 & Tani>=0.7": {
+   "pairs": 608
+  },
+  "dP>=1.0 & Tani>=0.5": {
+   "pairs": 9145
+  },
+  "dP>=1.5 & Tani>=0.7": {
+   "pairs": 427
+  },
+  "dP>=1.5 & Tani>=0.5": {
+   "pairs": 7054
+  },
+  "dP>=2.0 & Tani>=0.7": {
+   "pairs": 329
+  },
+  "dP>=2.0 & Tani>=0.5": {
+   "pairs": 5761
+  }
+ },
+ "collected": {
+  "train": 5456,
+  "cheater": 3644,
+  "dmin_train": 1.5,
+  "dmax_train": 4.0,
+  "tmin": 0.5
+ }
+}

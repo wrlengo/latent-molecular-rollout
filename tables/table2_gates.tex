@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Five tests of the latent pKa rollout. Entries labeled Pass or Conditional refer to prespecified thresholds for G1--G3 and G5. G4 is reported descriptively rather than as a binary gate: the bands are $|\cos|<0.05$ (random), $0.05$--$0.2$ (weak direction), and $\geq0.2$ (strong direction). The G4 row uses the expanded 43-pair median; the original top-20 bank and its small-gap subset are a separate selection.}
+\label{tab:gates}
+\small
+\begin{tabular}{p{0.27\linewidth}p{0.45\linewidth}p{0.18\linewidth}}
+\toprule
+Gate & Result & Reading \\
+\midrule
+G1 Interpolation monotonicity & 1.000 (38/38) & Pass \\
+G2 On-manifold trajectory & off-manifold = 0.072 & Pass \\
+G3 Latent intervention & response = 45\%; moved = 30\% & Conditional causal \\
+G4 Gradient--chemistry alignment & median cos $=0.107$ (n = 43); weak-direction band & Descriptive \\
+G5 Direction sign & 0.676 (71/105) & Pass \\
+\bottomrule
+\end{tabular}
+\end{table}

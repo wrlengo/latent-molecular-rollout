@@ -1,0 +1,110 @@
+{
+  "protocol": {
+    "pca": "Raw-h PCA fit on the same 2,855 fit rows as ridge; no test rows or test labels used; no per-dimension scaling",
+    "primary_metric": "||P_90 d||/||d|| per low-to-high pKa displacement; norm fraction <0.2 means less than 20% of displacement norm lies in the top-90% variance subspace",
+    "secondary_metric": "Cosine to the mean unit fit-displacement direction, before and after projection onto P_90; test pairs are not used to construct this direction",
+    "independence_limit": "The 43 test pairs informed earlier exploratory diagnostics; pair bootstrap does not model pair dependence or external replication"
+  },
+  "artifact_sha256": {
+    "h_train.npz": "8f4157860cf3f9e57297e10d64c9690492ad187536252f32facfe73805613143",
+    "h_test.npz": "8f45b2c98632b77bdec45a25cd8d2f14998df8962cb2cf71650e38ff4a58308b",
+    "ridge_selected_weights.npz": "3428855b98931429049cc663587ff206ae37d8e23c53aee18ca9c09e474838e8",
+    "frozen_ridge_test_pairs.csv": "2ea024c9d6749543defa48421788520d32af7675d6ec6f61d7244ae170d23a55",
+    "projection_diagnosis.json": "ba3cea9404f0fd335634c4439f10926dbf7b012b1680d9d000da788688868e1a",
+    "gate4_stratified.json": "b5a3d355234e75669ae20da61ea2eb69f7766254ef980bbdb03c0a5d0650eb7a"
+  },
+  "counts": {
+    "fit": 2855,
+    "test": 1151,
+    "fit_pairs": 381,
+    "test_pairs": 43,
+    "latent_dim": 4096
+  },
+  "pca": {
+    "rank": 2855,
+    "k90": 6,
+    "variance_captured_at_k90": 0.9019070662544768,
+    "top1_explained_variance_ratio": 0.6236586439972772,
+    "top10_cumulative_variance_ratio": 0.9365674150483057,
+    "top100_cumulative_variance_ratio": 0.9931040386953781
+  },
+  "top90_displacement_projection": {
+    "fit_norm_fraction": {
+      "n": 381,
+      "mean": 0.7863687756612584,
+      "median": 0.8195468089973065,
+      "median_bootstrap_95ci": [
+        0.7987701371415353,
+        0.8303830826608158
+      ]
+    },
+    "test_norm_fraction": {
+      "n": 43,
+      "mean": 0.786993813179556,
+      "median": 0.8184025600128434,
+      "median_bootstrap_95ci": [
+        0.7718205849817216,
+        0.8485056300045938
+      ]
+    },
+    "fit_energy_fraction": {
+      "n": 381,
+      "mean": 0.6341611785656304,
+      "median": 0.6716569721376675,
+      "median_bootstrap_95ci": [
+        0.6380337319891072,
+        0.6895360639692794
+      ]
+    },
+    "test_energy_fraction": {
+      "n": 43,
+      "mean": 0.6339046257161831,
+      "median": 0.6697827502355758,
+      "median_bootstrap_95ci": [
+        0.5957070154015269,
+        0.7199618041494926
+      ]
+    },
+    "decision": "represented_in_top90"
+  },
+  "mean_fit_direction": {
+    "top90_norm_fraction_of_unit_direction": 0.9495031427782772,
+    "fit_full_cosine": {
+      "n": 381,
+      "mean": 0.16068146136943678,
+      "median": 0.28489171461518914,
+      "median_bootstrap_95ci": [
+        0.197221577849929,
+        0.3665778617776659
+      ]
+    },
+    "test_full_cosine": {
+      "n": 43,
+      "mean": 0.15744895896200398,
+      "median": 0.2842762220234633,
+      "median_bootstrap_95ci": [
+        -0.045305705229681165,
+        0.42678159932042337
+      ]
+    },
+    "fit_top90_cosine": {
+      "n": 381,
+      "mean": 0.15256755255648624,
+      "median": 0.2598513022706123,
+      "median_bootstrap_95ci": [
+        0.17175254230212145,
+        0.35870653045981377
+      ]
+    },
+    "test_top90_cosine": {
+      "n": 43,
+      "mean": 0.1577675232635203,
+      "median": 0.28157002375819884,
+      "median_bootstrap_95ci": [
+        -0.013692275141493007,
+        0.44000660694563043
+      ]
+    }
+  },
+  "interpretation_limit": "Subspace coverage and directional agreement are distinct. This readout-free analysis does not prove the absence of nonlinear or scaffold-specific directions."
+}

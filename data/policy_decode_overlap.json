@@ -1,0 +1,11 @@
+{
+  "p3_sources": 80,
+  "policy_pairs": 43,
+  "policy_sources": 37,
+  "policy_endpoints": 80,
+  "source_source_overlap": 37,
+  "source_any_endpoint_overlap": 80,
+  "policy_pairs_with_p3_source": 43,
+  "exact_directed_pair_overlap": 37,
+  "interpretation": "P3 is a decoding audit on a cohort overlapping the policy test, not an independent replication."
+}

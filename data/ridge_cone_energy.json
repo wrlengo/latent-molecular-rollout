@@ -1,0 +1,39 @@
+{
+  "latent_dim": 4096,
+  "pca_components_kept": 6,
+  "pca_cumulative_variance_top_k": 0.9019070662544768,
+  "random_reference_energy_fraction_top_k": 0.00146484375,
+  "w_energy_fraction_in_top_k_pca": 4.917541372333416e-09,
+  "w_energy_top_coordinate_share": 0.9852147808596188,
+  "w_energy_top_two_coordinate_share": 0.9998781334487509,
+  "pairs43": {
+    "n_pairs": 43,
+    "displacement_span_rank": 43,
+    "w_energy_fraction_in_cone": 6.163762830425529e-07,
+    "random_reference_energy_fraction_in_cone": 0.010498046875,
+    "unit_displacement_energy_fraction_in_top_k_pca": 0.6339046257161833,
+    "mean_cos_w_with_displacements": 1.9937462001248004e-05
+  },
+  "pairs151": {
+    "n_pairs": 151,
+    "displacement_span_rank": 140,
+    "w_energy_fraction_in_cone": 4.624547152382888e-06,
+    "random_reference_energy_fraction_in_cone": 0.0341796875,
+    "unit_displacement_energy_fraction_in_top_k_pca": 0.6673244396453099,
+    "mean_cos_w_with_displacements": 2.3077453483753895e-05
+  },
+  "excluding_top2_w_coordinates": {
+    "latent_dim": 4094,
+    "w_energy_fraction_in_top_k_pca": 3.814786996899021e-05,
+    "pairs43": {
+      "displacement_span_rank": 43,
+      "w_energy_fraction_in_cone": 0.005017739201231916,
+      "random_reference_energy_fraction_in_cone": 0.010503175378602833
+    },
+    "pairs151": {
+      "displacement_span_rank": 140,
+      "w_energy_fraction_in_cone": 0.038382675099470895,
+      "random_reference_energy_fraction_in_cone": 0.03419638495359062
+    }
+  }
+}

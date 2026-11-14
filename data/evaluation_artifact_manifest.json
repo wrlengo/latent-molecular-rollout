@@ -192,6 +192,14 @@
       "fig_readout_family.pdf": {
         "sha256": "72984d919f2b4ad6b9301b49f111213faab64d1f747fbc8ed23b19b9a7b17a2e",
         "bytes": 23242
+      },
+      "ridge_cone_energy.json": {
+        "sha256": "2093e80357bab0d7b9a5e3fb9777ae3c0e1023d3a79a460af1eccd708657677a",
+        "bytes": 1496
+      },
+      "analyze_ridge_cone_energy.py": {
+        "sha256": "6ef647834bb3b6b91983643d68a4a8f53804b1b1011b3097e5ad7002d6858aff",
+        "bytes": 4571
       }
     },
     "policy": {
@@ -724,8 +732,8 @@
         "bytes": 10549
       },
       "make_evaluation_manifest.py": {
-        "sha256": "b63000bd5f2c2a3b97cc028e82cb8d61fe86124badd30f11cb75ce49e5e91772",
-        "bytes": 23564
+        "sha256": "6f27a1e4d68d142aa7dfdc42eed0459cd3cdb8852ca442bd44852bba087231fd",
+        "bytes": 23664
       }
     },
     "p3_decode": {

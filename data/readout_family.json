@@ -1,0 +1,125 @@
+{
+ "protocol": {
+  "hidden_states": "PkaHead input (d=4096), frozen backbone",
+  "splits": "h_train 9202 / h_val 1151 / h_test 1151 (runs/fig on the cluster)",
+  "standardisation": "train mean/std; ridge intercept via centring",
+  "alpha_selection": "minimum validation MAE",
+  "best_alpha": 100.0,
+  "mlp": "one hidden layer ReLU, Adam, early stopping on validation MAE",
+  "pair_rule": "pairs_train.jsonl rows with both endpoints in the h_test set"
+ },
+ "n_states": {
+  "train": 9202,
+  "val": 1151,
+  "test": 1151
+ },
+ "n_pairs": 43,
+ "readouts": [
+  {
+   "name": "ridge_alpha_0.01",
+   "grad_method": "linear",
+   "mean_alignment": 3.74251940229442e-05,
+   "median_alignment": 9.973635314963758e-06,
+   "rho_amplitude": 0.06720024161884627,
+   "rho_p": 0.6662747004513082,
+   "val_mae": 2.4725496768951416,
+   "test_mae": 2.5654003620147705
+  },
+  {
+   "name": "ridge_alpha_0.1",
+   "grad_method": "linear",
+   "mean_alignment": 3.635494795162231e-05,
+   "median_alignment": 5.037104983784957e-06,
+   "rho_amplitude": 0.08562367864693446,
+   "rho_p": 0.5821273892492662,
+   "val_mae": 2.390408515930176,
+   "test_mae": 2.472801446914673
+  },
+  {
+   "name": "ridge_alpha_1.0",
+   "grad_method": "linear",
+   "mean_alignment": 2.5676734367152676e-05,
+   "median_alignment": 5.822686944156885e-06,
+   "rho_amplitude": 0.1559951676230746,
+   "rho_p": 0.3119034052731512,
+   "val_mae": 2.122283458709717,
+   "test_mae": 2.164555549621582
+  },
+  {
+   "name": "ridge_alpha_10.0",
+   "grad_method": "linear",
+   "mean_alignment": 1.0813921107910573e-05,
+   "median_alignment": 6.779343493690249e-06,
+   "rho_amplitude": 0.09257022047719722,
+   "rho_p": 0.5516464823211654,
+   "val_mae": 1.908024549484253,
+   "test_mae": 1.9491814374923706
+  },
+  {
+   "name": "ridge_alpha_100.0",
+   "grad_method": "linear",
+   "mean_alignment": 7.386776815110352e-06,
+   "median_alignment": 1.5081589310739218e-07,
+   "rho_amplitude": -0.1356085774690426,
+   "rho_p": 0.3808047626178861,
+   "val_mae": 1.8478751182556152,
+   "test_mae": 1.9279978275299072
+  },
+  {
+   "name": "ridge_shuffled_alpha_100.0",
+   "grad_method": "linear",
+   "mean_alignment": -5.739084372180514e-06,
+   "median_alignment": -1.055814209394157e-06,
+   "rho_amplitude": 0.03926306251887647,
+   "rho_p": 0.8013500467824015,
+   "val_mae": 2.8907649517059326,
+   "test_mae": 2.871685266494751
+  },
+  {
+   "name": "ridge_half_alpha_100.0",
+   "grad_method": "linear",
+   "mean_alignment": 5.782323114544852e-06,
+   "median_alignment": 1.0918164434770006e-06,
+   "rho_amplitude": -0.10329205678042887,
+   "rho_p": 0.5060833463099802,
+   "val_mae": 1.911401391029358,
+   "test_mae": 2.0063960552215576
+  },
+  {
+   "name": "mlp_h64",
+   "grad_method": "exact_backprop",
+   "mean_alignment": 5.011505345464684e-05,
+   "median_alignment": 0.0002337786863790825,
+   "rho_amplitude": -0.22485653881002718,
+   "rho_p": 0.1395085772460226,
+   "val_mae": 1.8422168493270874,
+   "test_mae": 1.9560317993164062
+  },
+  {
+   "name": "mlp_h256",
+   "grad_method": "exact_backprop",
+   "mean_alignment": -1.3107043741911184e-05,
+   "median_alignment": -4.90793063363526e-05,
+   "rho_amplitude": -0.18559347629115072,
+   "rho_p": 0.22651332759584916,
+   "val_mae": 1.8633105754852295,
+   "test_mae": 1.9822375774383545
+  }
+ ],
+ "corr_alignment_vs_rho": {
+  "pearson": 0.14961561188495373,
+  "pearson_p": 0.6888972966713232,
+  "spearman": 0.18333333333333332,
+  "spearman_p": 0.6217176660024037
+ },
+ "cone": {
+  "n_pairs": 43,
+  "pairwise_cosine_mean": 0.02044261060655117,
+  "pairwise_cosine_median": 0.019948337227106094,
+  "pairwise_cosine_q10": -0.4793202579021454,
+  "pairwise_cosine_q90": 0.5368083119392395,
+  "participation_ratio": 6.122868061065674,
+  "dims_for_90pct_variance": 15,
+  "angle_best_ridge_vs_mean_axis_deg": 89.99796295166016
+ }
+}

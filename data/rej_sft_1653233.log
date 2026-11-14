@@ -1,0 +1,126 @@
+gcc-11.3.0 loaded successful
+cuda-12.4 loaded successful
+⚙️  Running in WANDB offline mode⚙️  Running in WANDB offline mode
+
+⚙️  Running in WANDB offline mode⚙️  Running in WANDB offline mode
+
+Random Seed: 12345
+Using Rotation Embedding
+Random Seed: 12345
+Using Rotation Embedding
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+{'loss': 0.6017, 'grad_norm': 5.20192813873291, 'learning_rate': 9.989294616193017e-05, 'epoch': 0.07}
+{'loss': 0.5815, 'grad_norm': 7.5925116539001465, 'learning_rate': 9.95234720167318e-05, 'epoch': 0.14}
+{'loss': 0.5961, 'grad_norm': 3.385514259338379, 'learning_rate': 9.88922085478992e-05, 'epoch': 0.21}
+{'loss': 0.5617, 'grad_norm': 8.86406135559082, 'learning_rate': 9.800249271929645e-05, 'epoch': 0.28}
+{'loss': 0.4957, 'grad_norm': 5.296302318572998, 'learning_rate': 9.685902771701913e-05, 'epoch': 0.35}
+{'loss': 0.5153, 'grad_norm': 5.837174892425537, 'learning_rate': 9.546785808756926e-05, 'epoch': 0.42}
+{'loss': 0.5098, 'grad_norm': 3.4718117713928223, 'learning_rate': 9.38363377853754e-05, 'epoch': 0.49}
+{'loss': 0.5311, 'grad_norm': 4.038881778717041, 'learning_rate': 9.197309129856433e-05, 'epoch': 0.56}
+{'loss': 0.5218, 'grad_norm': 2.3540515899658203, 'learning_rate': 8.988796805848007e-05, 'epoch': 0.63}
+{'loss': 0.5373, 'grad_norm': 2.3518967628479004, 'learning_rate': 8.759199037394887e-05, 'epoch': 0.7}
+{'loss': 0.4972, 'grad_norm': 2.4901978969573975, 'learning_rate': 8.509729516551841e-05, 'epoch': 0.77}
+{'loss': 0.5509, 'grad_norm': 1.951460599899292, 'learning_rate': 8.241706980767381e-05, 'epoch': 0.84}
+{'loss': 0.4843, 'grad_norm': 4.1210713386535645, 'learning_rate': 7.956548241817912e-05, 'epoch': 0.91}
+{'loss': 0.5031, 'grad_norm': 3.2763733863830566, 'learning_rate': 7.655760696304641e-05, 'epoch': 0.98}
+{'loss': 0.412, 'grad_norm': 4.713728427886963, 'learning_rate': 7.34093435730401e-05, 'epoch': 1.04}
+{'loss': 0.3383, 'grad_norm': 2.6596696376800537, 'learning_rate': 7.013733449293687e-05, 'epoch': 1.11}
+{'loss': 0.2896, 'grad_norm': 3.128610372543335, 'learning_rate': 6.675887610784708e-05, 'epoch': 1.18}
+{'loss': 0.2986, 'grad_norm': 3.375539541244507, 'learning_rate': 6.329182751164165e-05, 'epoch': 1.25}
+{'loss': 0.2656, 'grad_norm': 2.467440128326416, 'learning_rate': 5.9754516100806423e-05, 'epoch': 1.32}
+{'loss': 0.3245, 'grad_norm': 2.5586936473846436, 'learning_rate': 5.61656406927711e-05, 'epoch': 1.39}
+{'loss': 0.2995, 'grad_norm': 2.5412237644195557, 'learning_rate': 5.254417268084514e-05, 'epoch': 1.46}
+{'loss': 0.3068, 'grad_norm': 3.3095853328704834, 'learning_rate': 4.890925574827195e-05, 'epoch': 1.53}
+{'loss': 0.2851, 'grad_norm': 3.0744338035583496, 'learning_rate': 4.528010467153016e-05, 'epoch': 1.6}
+{'loss': 0.3052, 'grad_norm': 3.9627788066864014, 'learning_rate': 4.16759037478238e-05, 'epoch': 1.67}
+{'loss': 0.2375, 'grad_norm': 2.979938507080078, 'learning_rate': 3.8115705383691355e-05, 'epoch': 1.74}
+{'loss': 0.3011, 'grad_norm': 3.858823776245117, 'learning_rate': 3.461832938081059e-05, 'epoch': 1.81}
+{'loss': 0.3277, 'grad_norm': 3.295212745666504, 'learning_rate': 3.12022634513916e-05, 'epoch': 1.88}
+{'loss': 0.3592, 'grad_norm': 2.152020215988159, 'learning_rate': 2.7885565489049946e-05, 'epoch': 1.95}
+{'loss': 0.2439, 'grad_norm': 2.5024757385253906, 'learning_rate': 2.4685768111772644e-05, 'epoch': 2.01}
+{'loss': 0.1347, 'grad_norm': 1.6483736038208008, 'learning_rate': 2.1619785981578573e-05, 'epoch': 2.08}
+{'loss': 0.1327, 'grad_norm': 2.940474510192871, 'learning_rate': 1.8703826390797048e-05, 'epoch': 2.15}
+{'loss': 0.149, 'grad_norm': 2.121788501739502, 'learning_rate': 1.595330358762047e-05, 'epoch': 2.22}
+{'loss': 0.1486, 'grad_norm': 2.4884583950042725, 'learning_rate': 1.3382757293820409e-05, 'epoch': 2.29}
+{'loss': 0.1444, 'grad_norm': 2.9329211711883545, 'learning_rate': 1.100577584535592e-05, 'epoch': 2.36}
+{'loss': 0.1341, 'grad_norm': 3.800018787384033, 'learning_rate': 8.834924362165992e-06, 'epoch': 2.43}
+{'loss': 0.1272, 'grad_norm': 2.301213026046753, 'learning_rate': 6.881678326852136e-06, 'epoch': 2.5}
+{'loss': 0.1258, 'grad_norm': 2.4962310791015625, 'learning_rate': 5.156362923365588e-06, 'epoch': 2.57}
+{'loss': 0.1358, 'grad_norm': 2.360557794570923, 'learning_rate': 3.6680984563647434e-06, 'epoch': 2.64}
+{'loss': 0.1314, 'grad_norm': 2.28723406791687, 'learning_rate': 2.424752139765318e-06, 'epoch': 2.71}
+{'loss': 0.1592, 'grad_norm': 3.202334403991699, 'learning_rate': 1.4328965093369283e-06, 'epoch': 2.78}
+{'loss': 0.1436, 'grad_norm': 2.2047066688537598, 'learning_rate': 6.977746791840434e-07, 'epoch': 2.85}
+{'loss': 0.1393, 'grad_norm': 2.2152581214904785, 'learning_rate': 2.232726257713036e-07, 'epoch': 2.92}
+{'loss': 0.1751, 'grad_norm': 2.2951653003692627, 'learning_rate': 1.189864600454338e-08, 'epoch': 2.99}
+{'train_runtime': 5104.135, 'train_samples_per_second': 1.349, 'train_steps_per_second': 0.085, 'train_loss': 0.3257574894017092, 'epoch': 3.0}
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /home/bingxing2/home/scx9kyg/LatentChem/code_train_sft/wandb/offline-run-20261114_074016-rbf3rb5u[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20261114_074016-rbf3rb5u/logs[0m
+REJECTION SFT DONE
+
+
+
+============ Job 1653233 Performance Details ============
+JobID: 1653233
+User: scx9kyg
+Nodes、GPU: N/A
+Time Range: 2026-11-14 07:39:29 - 2026-11-14 09:05:41
+Running time: 0d1H26M12S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================

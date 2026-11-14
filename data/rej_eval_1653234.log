@@ -1,0 +1,195 @@
+gcc-11.3.0 loaded successful
+cuda-12.4 loaded successful
+[eval_gen] ckpt=/home/bingxing2/home/scx9kyg/pKa/runs/v3_C_gen2_rej3/stage3_sub3 split=val n=255
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+  4/255  5s
+  44/255  45s
+  84/255  85s
+  124/255  124s
+  164/255  163s
+  204/255  216s
+  244/255  279s
+{
+  "ckpt": "/home/bingxing2/home/scx9kyg/pKa/runs/v3_C_gen2_rej3/stage3_sub3",
+  "split": "val",
+  "n": 255,
+  "validity": 0.9490196078431372,
+  "copy_rate": 0.0784313725490196,
+  "tanimoto_mean": 0.5316296462658656,
+  "scored": 242,
+  "dir_acc": 0.5702479338842975,
+  "mae_vs_target": 2.8510278925619836,
+  "mean_abs_move": 2.784963842975207,
+  "noop_mae": 2.2804545454545453,
+  "total_s": 295.41033720970154
+}
+[rescore] rows=255 unique_valid_gen=233
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+{
+ "n": 255,
+ "scored": 242,
+ "validity": 0.9490196078431372,
+ "copy_rate": 0.0784313725490196,
+ "tanimoto_mean": 0.5316296462658656,
+ "unique_gen": 233,
+ "dir_acc": 0.6859504132231405,
+ "mae_vs_target": 2.1541151213842977,
+ "noop_mae": 2.2804545454545453,
+ "mean_abs_move": 2.2294224560950413,
+ "pred_spread": 9.404296875,
+ "pred_unique": 136
+}
+RESCORE DONE
+=== rej3_val_rescored.jsonl  n=255  scored=242
+  unique_gen=234/255  unique_pred_pka=136
+  model   : dir_acc=0.686  mae_vs_tgt=2.154  |pred-src|=2.23
+  const*  : dir_acc=0.678 (c=3.46)  mae_vs_tgt=2.595 (c=4.30)
+  noop    : dir_acc=0.000  mae_vs_tgt=2.280
+  tanimoto=0.532 (n=242)  validity=0.949  copy=0.078
+  top_gen=[(None, 13), ('Nc1ccc(S(=O)(=O)NC(=O)c2ccccc2)cc1', 3), ('O=C(O)c1c[nH]cn1', 2)]
+[bon] shard=0/1 n_rows=255 N=8 T=0.9 seed=0
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+  rows 2/255
+  rows 22/255
+  rows 42/255
+  rows 62/255
+  rows 82/255
+  rows 102/255
+  rows 122/255
+  rows 142/255
+  rows 162/255
+  rows 182/255
+  rows 202/255
+  rows 222/255
+  rows 242/255
+[bon] unique valid candidates to score = 919
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+{
+ "ckpt": "/home/bingxing2/home/scx9kyg/pKa/runs/v3_C_gen2_rej3/stage3_sub3",
+ "split": "val",
+ "n_rows": 255,
+ "N": 8,
+ "temperature": 0.9,
+ "rows_with_any_valid_candidate": 255,
+ "mean_valid_candidates_per_row": 7.643137254901961,
+ "unique_valid_candidates": 919,
+ "pool_dir_rate": 0.6808403361344538,
+ "rows_with_any_correct_direction": 0.7803921568627451,
+ "rows_all_wrong": 56,
+ "dir_acc_oracle_at_N": 0.7803921568627451,
+ "dir_acc_first_candidate": 0.6862745098039216,
+ "dir_acc_random_candidate": 0.6901960784313725,
+ "mae_oracle_at_N": 1.414264093137255,
+ "mae_first_candidate": 2.096641544117647,
+ "noop_mae": 2.2932156862745097
+}
+BON DONE
+[anchor] loading baseline: /home/bingxing2/home/scx9kyg/pKa/runs/v3_C_gen2/stage3_sub3
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+[anchor] baseline source_gt_mae=1.961647
+[anchor] loading rejection_sft: /home/bingxing2/home/scx9kyg/pKa/runs/v3_C_gen2_rej3/stage3_sub3
+Random Seed: 12345
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Using Rotation Embedding
+Vocab size: 2393
+[FINETUNE MODE - smi-ted-Light]
+[anchor] rejection_sft source_gt_mae=2.089779
+{
+ "split": "val",
+ "n": 255,
+ "source_gt_mae_change": 0.12813235294117642,
+ "anchor_pass": true
+}
+ANCHOR DONE
+REJECTION EVAL DONE
+
+
+
+============ Job 1653234 Performance Details ============
+JobID: 1653234
+User: scx9kyg
+Nodes、GPU: N/A
+Time Range: 2026-11-14 09:05:41 - 2026-11-14 09:24:36
+Running time: 0d0H18M55S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================

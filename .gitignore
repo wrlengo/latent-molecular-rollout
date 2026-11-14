@@ -34,4 +34,6 @@ runs/
 
 # Large binary arrays (regenerable from the released JSON/CSV inputs)
 data/h_test.npz
+data/h_train.npz
+data/h_val.npz
 data/pca_direction_fit.npz

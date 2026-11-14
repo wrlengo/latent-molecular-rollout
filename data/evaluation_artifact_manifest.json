@@ -1,6 +1,6 @@
 {
   "contract": {
-    "artifact_verification": "All listed artifact sizes and SHA-256 hashes except h_train.npz are recomputed from the source files. The h_train.npz record is carried forward from the prior manifest because the source file is unavailable; it is marked carried_forward_source_unavailable and is not represented as independently reverified.",
+    "artifact_verification": "All listed artifact sizes and SHA-256 hashes are recomputed from the source files.",
     "shortcut_diagnosis": "Pre-repair MAE 1.103 is recomputed from 24 held-out diagnostic rows, not the full test set. Modality-conflict values are archived aggregate n=24 summaries; per-row conflict predictions and output-invariance counts are unavailable. Query-SMILES removal and token-id repair were both applied before the repaired comparison and were not separately ablated. Repaired MAE 2.087 uses a distinct 1,151-row cohort, so the pre/post difference is not an isolated shortcut-removal effect. The eval_text truncation fix is a historical engineering note without a preserved raw diagnostic and is not used in PkaHead-based comparisons.",
     "g4_s8_ridge_pca": "All linked latent calculations use the exact h_test.npz SHA-256 below; ridge fitting and PCA use the exact h_train.npz SHA-256 below. Cross-file numbers are generated only after hash assertions pass.",
     "sft": "SFT does not read h_test.npz. Its provenance uses checkpoint identities and SHA-256 hashes of every evaluation input; no unrelated latent hash is attached.",
@@ -178,6 +178,20 @@
       "paired_bootstrap_C_vs_Bp.json": {
         "sha256": "083ce767811d49bee6e69ac353994327d206c7580c7e2f5f1103cca75311e669",
         "bytes": 469
+      }
+    },
+    "readout_family": {
+      "readout_family.json": {
+        "sha256": "8ae6b94a6c5c4e4b3423c0cef063b42c18fff7b83cf0b83500025aebb8c4372e",
+        "bytes": 3788
+      },
+      "readout_family.py": {
+        "sha256": "312d1a7b1eef6fb597feac88912d60d6253358337794bb7fce98d96339e2514e",
+        "bytes": 14699
+      },
+      "fig_readout_family.pdf": {
+        "sha256": "72984d919f2b4ad6b9301b49f111213faab64d1f747fbc8ed23b19b9a7b17a2e",
+        "bytes": 23242
       }
     },
     "policy": {
@@ -532,23 +546,23 @@
         "bytes": 402147
       },
       "fig0_latent_audit_overview.svg": {
-        "sha256": "6adb7568e16d66702fd6d25287d7e99765d3577716247151a88e6c93754cb2e4",
-        "bytes": 15398
+        "sha256": "ce5f3a23606ff276678b3ff8b82b9eb0542e4842bb4159879999f3f5575725bb",
+        "bytes": 34985
       },
       "fig0_latent_audit_overview.pdf": {
-        "sha256": "2e7d9b5066b8bec447ca209ef152c6163543e19815bc2ac5cb16683147e94d31",
-        "bytes": 29093
+        "sha256": "76f43ac36ffe9a370c04205e55807d30ee8a0583f866a3f033a4f79612e50bb2",
+        "bytes": 35325
       },
       "fig0_latent_audit_overview.png": {
-        "sha256": "d8492c269533911ea26ce6c0160131401c9e8b8b9aac0c1fe6a321e076ac1b16",
-        "bytes": 381002
+        "sha256": "34a1f1001bff5ba3c1054578d72ce6935b2a390c692a6294006aa3a54b60b205",
+        "bytes": 262089
       },
       "fig0_latent_algorithm.svg": {
-        "sha256": "4278619ac4b13d6cd5dd890b840ff6550e1bb12982f7a09717381e43c15e240c",
+        "sha256": "aa24943322a63db39bdfabafebb34efc9f5ecfb540decf7ad7d8cb149df51de3",
         "bytes": 26879
       },
       "fig0_latent_algorithm.pdf": {
-        "sha256": "d44a26c82d04c96fdbc356b5ec22a309545e3ddad538b96054dc8e572a894312",
+        "sha256": "4a7afe8034b7ca77118588a7360233d6397847a1b9755a19e41f227b9c217f9b",
         "bytes": 32508
       },
       "fig0_latent_algorithm.png": {
@@ -678,12 +692,12 @@
         "bytes": 1548
       },
       "make_intro_diagrams.py": {
-        "sha256": "cc455a32314402afa87aab8014075b2dac2420eef19c1494654f46016c03c85d",
-        "bytes": 8388
+        "sha256": "22cd4ba15aa7a6f3c5f364d3c11bc193bbf608ab3c0c6cdd636c694b81d75946",
+        "bytes": 10549
       },
       "make_evaluation_manifest.py": {
-        "sha256": "cbb581503bb65ead2105a0e5e1e49883b66677d4e786aa0691c7803628de9c64",
-        "bytes": 23071
+        "sha256": "4a5cefd289ddbcebfcfdd37ed590780cfa0a5ae0d4b82409649806a204be2b8b",
+        "bytes": 23219
       }
     },
     "p3_decode": {
@@ -725,8 +739,7 @@
     "latents": {
       "h_train.npz": {
         "sha256": "8f4157860cf3f9e57297e10d64c9690492ad187536252f32facfe73805613143",
-        "bytes": 58522482,
-        "verification_status": "carried_forward_source_unavailable"
+        "bytes": 58522482
       },
       "h_test.npz": {
         "sha256": "8f45b2c98632b77bdec45a25cd8d2f14998df8962cb2cf71650e38ff4a58308b",
